@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Projects | DE TSAKMA SOLAR ENERGY LTD</title>
+
+    <meta
+        name="description"
+        content="Explore solar energy, inverter, electrical and technology projects by DE TSAKMA SOLAR ENERGY LTD."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        /* =========================
+           PROJECT PAGE
+           ========================= */
+
+        .portfolio-section {
+            padding: 110px 0;
+            background: var(--light);
+        }
+
+        .project-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 45px;
+        }
+
+        .project-filter {
+            border: 1px solid var(--border);
+            background: white;
+            color: var(--secondary);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .project-filter:hover,
+        .project-filter.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .portfolio-card {
+            overflow: hidden;
+            background: white;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-7px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .portfolio-image {
+            height: 260px;
+            overflow: hidden;
+            position: relative;
+            background: #dfeaf1;
+        }
+
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .portfolio-card:hover .portfolio-image img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-placeholder {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            place-items: center;
+            font-size: 65px;
+            background:
+                linear-gradient(
+                    135deg,
+                    #087fce,
+                    #082b40
+                );
+        }
+
+        .portfolio-category {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            padding: 7px 12px;
+            border-radius: 50px;
+            background: rgba(255,255,255,0.95);
+            color: var(--primary);
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .portfolio-info {
+            padding: 23px;
+        }
+
+        .portfolio-info h3 {
+            font-size: 18px;
+            margin-bottom: 9px;
+        }
+
+        .portfolio-info p {
+            color: var(--light-text);
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .portfolio-location {
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .project-note {
+            margin-top: 50px;
+            padding: 25px;
+            border-radius: var(--radius-md);
+            background: white;
+            border: 1px dashed var(--border);
+            text-align: center;
+        }
+
+        .project-note p {
+            color: var(--light-text);
+            font-size: 13px;
+        }
+
+        .project-note strong {
+            color: var(--secondary);
+        }
+
+
+        @media (max-width: 1050px) {
+
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 760px) {
+
+            .portfolio-section {
+                padding: 75px 0;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-image {
+                height: 230px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+         ========================= -->
+
+    <header class="header">
+
+        <div class="container nav-container">
+
+            <a href="../index.html" class="logo">
+
+                <img
+                    src="../images/logo.png"
+                    alt="DE TSAKMA SOLAR ENERGY LTD"
+                >
+
+            </a>
+
+
+            <nav class="navbar">
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="projects.html" class="active">
+                    Projects
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a href="contact.html" class="nav-quote">
+                    Get a Quote
+                </a>
+
+            </nav>
+
+
+            <button
+                class="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         PAGE HERO
+         ========================= -->
+
+    <section class="page-hero">
+
+        <div class="container page-hero-content">
+
+            <span class="section-label">
+                OUR WORK
+            </span>
+
+            <h1>
+                Projects That
+                <span>Power Progress</span>
+            </h1>
+
+            <p>
+                Explore some of the energy, electrical and technology
+                solutions delivered by DE TSAKMA SOLAR ENERGY LTD.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PROJECT PORTFOLIO
+         ========================= -->
+
+    <section class="portfolio-section">
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    PROJECT PORTFOLIO
+                </span>
+
+                <h2>
+                    Our Recent
+                    <span>Work</span>
+                </h2>
+
+                <p>
+                    Every project starts with understanding the client's
+                    needs and ends with a practical solution.
+                </p>
+
+            </div>
+
+
+
+            <!-- FILTERS -->
+
+            <div class="project-filters">
+
+                <button
+                    class="project-filter active"
+                    data-filter="all"
+                >
+                    All Projects
+                </button>
+
+                <button
+                    class="project-filter"
+                    data-filter="solar"
+                >
+                    Solar
+                </button>
+
+                <button
+                    class="project-filter"
+                    data-filter="inverter"
+                >
+                    Inverter
+                </button>
+
+                <button
+                    class="project-filter"
+                    data-filter="electrical"
+                >
+                    Electrical
+                </button>
+
+                <button
+                    class="project-filter"
+                    data-filter="technology"
+                >
+                    Technology
+                </button>
+
+            </div>
+
+
+
+            <!-- PROJECTS -->
+
+            <div class="portfolio-grid">
+
+
+                <!-- PROJECT 1 -->
+
+                <article
+                    class="portfolio-card"
+                    data-category="solar"
+                >
+
+                    <div class="portfolio-image">
+
+                        <div class="portfolio-placeholder">
+                            ☀️
+                        </div>
+
+                        <span class="portfolio-category">
+                            Solar
+                        </span>
+
+                    </div>
+
+                    <div class="portfolio-info">
+
+                        <h3>
+                            Residential Solar Power System
+                        </h3>
+
+                        <p>
+                            Solar energy solution designed to provide
+                            dependable power for a residential property.
+                        </p>
+
+                        <span class="portfolio-location">
+                            📍 Adamawa State
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PROJECT 2 -->
+
+                <article
+                    class="portfolio-card"
+                    data-category="inverter"
+                >
+
+                    <div class="portfolio-image">
+
+                        <div class="portfolio-placeholder">
+                            🔋
+                        </div>
+
+                        <span class="portfolio-category">
+                            Inverter
+                        </span>
+
+                    </div>
+
+                    <div class="portfolio-info">
+
+                        <h3>
+                            Inverter & Battery Installation
+                        </h3>
+
+                        <p>
+                            Backup energy storage solution designed
+                            for reliable power availability.
+                        </p>
+
+                        <span class="portfolio-location">
+                            📍 Yola
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PROJECT 3 -->
+
+                <article
+                    class="portfolio-card"
+                    data-category="electrical"
+                >
+
+                    <div class="portfolio-image">
+
+                        <div class="portfolio-placeholder">
+                            ⚡
+                        </div>
+
+                        <span class="portfolio-category">
+                            Electrical
+                        </span>
+
+                    </div>
+
+                    <div class="portfolio-info">
+
+                        <h3>
+                            Electrical Installation
+                        </h3>
+
+                        <p>
+                            Professional electrical installation and
+                            distribution work for a modern facility.
+                        </p>
+
+                        <span class="portfolio-location">
+                            📍 Adamawa State
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PROJECT 4 -->
+
+                <article
+                    class="portfolio-card"
+                    data-category="solar"
+                >
+
+                    <div class="portfolio-image">
+
+                        <div class="portfolio-placeholder">
+                            🔆
+                        </div>
+
+                        <span class="portfolio-category">
+                            Solar
+                        </span>
+
+                    </div>
+
+                    <div class="portfolio-info">
+
+                        <h3>
+                            Commercial Solar Solution
+                        </h3>
+
+                        <p>
+                            Solar power system designed to support
+                            commercial energy requirements.
+                        </p>
+
+                        <span class="portfolio-location">
+                            📍 Northern Nigeria
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PROJECT 5 -->
+
+                <article
+                    class="portfolio-card"
+                    data-category="technology"
+                >
+
+                    <div class="portfolio-image">
+
+                        <div class="portfolio-placeholder">
+                            📡
+                        </div>
+
+                        <span class="portfolio-category">
+                            Technology
+                        </span>
+
+                    </div>
+
+                    <div class="portfolio-info">
+
+                        <h3>
+                            Smart Technology Solution
+                        </h3>
+
+                        <p>
+                            Connected technology and control solutions
+                            designed for improved monitoring and control.
+                        </p>
+
+                        <span class="portfolio-location">
+                            📍 Yola
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PROJECT 6 -->
+
+                <article
+                    class="portfolio-card"
+                    data-category="electrical"
+                >
+
+                    <div class="portfolio-image">
+
+                        <div class="portfolio-placeholder">
+                            🏠
+                        </div>
+
+                        <span class="portfolio-category">
+                            Electrical
+                        </span>
+
+                    </div>
+
+                    <div class="portfolio-info">
+
+                        <h3>
+                            Residential Electrical Project
+                        </h3>
+
+                        <p>
+                            Electrical installation and improvement
+                            work for a residential property.
+                        </p>
+
+                        <span class="portfolio-location">
+                            📍 Adamawa State
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+
+            <div class="project-note">
+
+                <p>
+                    <strong>More projects coming soon.</strong>
+                    We are continuously expanding our project portfolio.
+                    Contact us to discuss your own energy or technology project.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CALL TO ACTION
+         ========================= -->
+
+    <section class="quote-section">
+
+        <div class="container quote-container">
+
+            <div>
+
+                <span class="section-label">
+                    HAVE A PROJECT?
+                </span>
+
+                <h2>
+                    Let's Build Your
+                    <span>Energy Solution</span>
+                </h2>
+
+                <p>
+                    Tell us about your requirements and let our team
+                    help you develop a suitable solution.
+                </p>
+
+            </div>
+
+
+            <a
+                href="contact.html"
+                class="btn btn-primary"
+            >
+                Start Your Project →
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+
+            <div class="footer-brand">
+
+                <a
+                    href="../index.html"
+                    class="logo footer-logo"
+                >
+
+                    <img
+                        src="../images/logo.png"
+                        alt="DE TSAKMA SOLAR ENERGY LTD"
+                    >
+
+                </a>
+
+                <p>
+                    Renewable energy, electrical and technology
+                    solutions designed to power homes, businesses
+                    and a brighter future.
+                </p>
+
+                <span class="slogan">
+                    …Powering a Brighter Tomorrow
+                </span>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Company
+                </h3>
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="projects.html">
+                    Projects
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Services
+                </h3>
+
+                <a href="services.html">
+                    Solar Energy
+                </a>
+
+                <a href="services.html">
+                    Inverter & Battery
+                </a>
+
+                <a href="services.html">
+                    Electrical Installation
+                </a>
+
+                <a href="services.html">
+                    CCTV & Security
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact
+                </h3>
+
+                <a href="contact.html">
+                    Contact Us
+                </a>
+
+                <a href="contact.html">
+                    Request a Quote
+                </a>
+
+                <p>
+                    DE TSAKMA SOLAR ENERGY LTD
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+                    © 2026 DE TSAKMA SOLAR ENERGY LTD.
+                    All Rights Reserved.
+                </p>
+
+                <p>
+                    RC 8097864
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================
+         WHATSAPP
+         ========================= -->
+
+    <a
+        href="https://wa.me/"
+        class="whatsapp-button"
+        target="_blank"
+        rel="noopener"
+        aria-label="Chat with DE TSAKMA SOLAR ENERGY LTD on WhatsApp"
+    >
+        💬
+    </a>
+
+
+
+    <script src="../js/script.js"></script>
+
+
+    <!-- =========================
+         PROJECT FILTER SCRIPT
+         ========================= -->
+
+    <script>
+
+        const filters =
+            document.querySelectorAll(".project-filter");
+
+        const projects =
+            document.querySelectorAll(".portfolio-card");
+
+
+        filters.forEach(filter => {
+
+            filter.addEventListener("click", () => {
+
+                const selected =
+                    filter.getAttribute("data-filter");
+
+
+                filters.forEach(button => {
+                    button.classList.remove("active");
+                });
+
+                filter.classList.add("active");
+
+
+                projects.forEach(project => {
+
+                    const category =
+                        project.getAttribute("data-category");
+
+
+                    if (
+                        selected === "all" ||
+                        category === selected
+                    ) {
+
+                        project.style.display = "";
+
+                    } else {
+
+                        project.style.display = "none";
+
+                    }
+
+                });
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
