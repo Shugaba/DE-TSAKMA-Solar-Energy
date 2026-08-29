@@ -1,3 +1,1026 @@
-<a href="../index.html" class="logo">
-    <img src="../images/logo.png" alt="DE TSAKMA SOLAR ENERGY LTD Logo">
-</a>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | DE TSAKMA SOLAR ENERGY LTD</title>
+
+    <meta
+        name="description"
+        content="Contact DE TSAKMA SOLAR ENERGY LTD for solar energy, inverter, electrical, CCTV, networking, automation and technology solutions."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+
+        /* =========================
+           CONTACT PAGE
+           ========================= */
+
+        .contact-section {
+            padding: 110px 0;
+            background: var(--light);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 35px;
+            align-items: start;
+        }
+
+        /* =========================
+           CONTACT INFORMATION
+           ========================= */
+
+        .contact-info {
+            background: var(--secondary);
+            color: white;
+            padding: 45px;
+            border-radius: var(--radius-lg);
+            min-height: 100%;
+        }
+
+        .contact-info .section-label {
+            color: #73c8f5;
+        }
+
+        .contact-info h2 {
+            color: white;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .contact-info > p {
+            color: rgba(255,255,255,0.72);
+            font-size: 13px;
+            margin-bottom: 35px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .contact-icon {
+            width: 46px;
+            height: 46px;
+            flex-shrink: 0;
+            display: grid;
+            place-items: center;
+            border-radius: 11px;
+            background: rgba(255,255,255,0.10);
+            font-size: 20px;
+        }
+
+        .contact-item span {
+            display: block;
+            color: rgba(255,255,255,0.55);
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .contact-item strong {
+            color: white;
+            font-size: 14px;
+        }
+
+        .contact-item a {
+            color: white;
+            font-size: 14px;
+        }
+
+        .contact-item a:hover {
+            color: #73c8f5;
+        }
+
+
+        /* =========================
+           QUOTE FORM
+           ========================= */
+
+        .quote-form-wrapper {
+            background: white;
+            padding: 45px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .quote-form-wrapper h2 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .quote-form-wrapper > p {
+            color: var(--light-text);
+            font-size: 13px;
+            margin-bottom: 30px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 7px;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 13px 14px;
+            background: #fff;
+            color: var(--secondary);
+            font-family: inherit;
+            font-size: 13px;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(8,127,206,0.08);
+        }
+
+        .form-group textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            width: 100%;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-note {
+            text-align: center;
+            margin-top: 12px;
+            color: var(--light-text);
+            font-size: 11px;
+        }
+
+
+        /* =========================
+           QUICK CONTACT
+           ========================= */
+
+        .quick-contact {
+            padding: 90px 0;
+            background: white;
+        }
+
+        .quick-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .quick-card {
+            padding: 30px;
+            text-align: center;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            transition: var(--transition);
+        }
+
+        .quick-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .quick-card-icon {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .quick-card h3 {
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        .quick-card p {
+            color: var(--light-text);
+            font-size: 12px;
+        }
+
+        .quick-card a {
+            display: inline-block;
+            margin-top: 12px;
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+
+        /* =========================
+           MOBILE
+           ========================= */
+
+        @media (max-width: 850px) {
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .contact-section,
+            .quick-contact {
+                padding: 75px 0;
+            }
+
+            .contact-info,
+            .quote-form-wrapper {
+                padding: 28px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+         ========================= -->
+
+    <header class="header">
+
+        <div class="container nav-container">
+
+            <a href="../index.html" class="logo">
+
+                <img
+                    src="../images/logo.png"
+                    alt="DE TSAKMA SOLAR ENERGY LTD"
+                >
+
+            </a>
+
+
+            <nav class="navbar">
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="projects.html">
+                    Projects
+                </a>
+
+                <a href="contact.html" class="active">
+                    Contact
+                </a>
+
+                <a href="contact.html" class="nav-quote">
+                    Get a Quote
+                </a>
+
+            </nav>
+
+
+            <button
+                class="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         PAGE HERO
+         ========================= -->
+
+    <section class="page-hero">
+
+        <div class="container page-hero-content">
+
+            <span class="section-label">
+                GET IN TOUCH
+            </span>
+
+            <h1>
+                Let's Discuss Your
+                <span>Project</span>
+            </h1>
+
+            <p>
+                Have a solar, electrical, backup power or technology
+                project? Send us your requirements and let's discuss
+                the right solution for you.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACT SECTION
+         ========================= -->
+
+    <section class="contact-section">
+
+        <div class="container">
+
+            <div class="contact-grid">
+
+
+                <!-- CONTACT INFORMATION -->
+
+                <div class="contact-info">
+
+                    <span class="section-label">
+                        CONTACT US
+                    </span>
+
+                    <h2>
+                        We're Ready to
+                        Help
+                    </h2>
+
+                    <p>
+                        Contact DE TSAKMA SOLAR ENERGY LTD to discuss
+                        your energy, electrical or technology needs.
+                    </p>
+
+
+                    <!-- Phone -->
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            📞
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Phone
+                            </span>
+
+                            <strong>
+                                Contact us
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- WhatsApp -->
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            💬
+                        </div>
+
+                        <div>
+
+                            <span>
+                                WhatsApp
+                            </span>
+
+                            <strong>
+                                Available for enquiries
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Email -->
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            ✉️
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Email
+                            </span>
+
+                            <strong>
+                                Send us an enquiry
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Location -->
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            📍
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Location
+                            </span>
+
+                            <strong>
+                                Nigeria
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- QUOTE FORM -->
+
+                <div class="quote-form-wrapper">
+
+                    <span class="section-label">
+                        REQUEST A QUOTE
+                    </span>
+
+                    <h2>
+                        Tell Us About Your Project
+                    </h2>
+
+                    <p>
+                        Complete the form below with as much information
+                        as possible.
+                    </p>
+
+
+                    <form id="quoteForm">
+
+
+                        <div class="form-row">
+
+
+                            <div class="form-group">
+
+                                <label for="name">
+                                    Full Name *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Your full name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="phone">
+                                    Phone Number *
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="Your phone number"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="form-row">
+
+
+                            <div class="form-group">
+
+                                <label for="email">
+                                    Email Address
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Your email address"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="service">
+                                    Service Required *
+                                </label>
+
+                                <select
+                                    id="service"
+                                    name="service"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select a service
+                                    </option>
+
+                                    <option value="Solar Energy">
+                                        Solar Energy System
+                                    </option>
+
+                                    <option value="Inverter & Battery">
+                                        Inverter & Battery
+                                    </option>
+
+                                    <option value="Electrical Installation">
+                                        Electrical Installation
+                                    </option>
+
+                                    <option value="CCTV & Security">
+                                        CCTV & Security
+                                    </option>
+
+                                    <option value="Networking">
+                                        Networking
+                                    </option>
+
+                                    <option value="Smart Home">
+                                        Smart Home & Automation
+                                    </option>
+
+                                    <option value="IoT">
+                                        IoT & Control Systems
+                                    </option>
+
+                                    <option value="Programming">
+                                        Programming & Technology
+                                    </option>
+
+                                    <option value="Consultation">
+                                        Consultation & Training
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="message">
+                                Project Details *
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder="Tell us about your project, estimated load, location, existing system or anything else that may help us understand your requirements."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary form-submit"
+                        >
+                            Submit Quote Request →
+                        </button>
+
+
+                        <p class="form-note">
+                            Your enquiry will be prepared for submission.
+                        </p>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         QUICK CONTACT
+         ========================= -->
+
+    <section class="quick-contact">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    QUICK CONTACT
+                </span>
+
+                <h2>
+                    Choose How You'd Like to
+                    <span>Reach Us</span>
+                </h2>
+
+            </div>
+
+
+            <div class="quick-grid">
+
+
+                <div class="quick-card">
+
+                    <div class="quick-card-icon">
+                        💬
+                    </div>
+
+                    <h3>
+                        WhatsApp
+                    </h3>
+
+                    <p>
+                        Chat with us about your project or service enquiry.
+                    </p>
+
+                    <a href="#" id="whatsappLink">
+                        Start Chat →
+                    </a>
+
+                </div>
+
+
+                <div class="quick-card">
+
+                    <div class="quick-card-icon">
+                        📞
+                    </div>
+
+                    <h3>
+                        Phone
+                    </h3>
+
+                    <p>
+                        Speak directly with our team about your requirements.
+                    </p>
+
+                    <a href="#">
+                        Call Us →
+                    </a>
+
+                </div>
+
+
+                <div class="quick-card">
+
+                    <div class="quick-card-icon">
+                        ✉️
+                    </div>
+
+                    <h3>
+                        Email
+                    </h3>
+
+                    <p>
+                        Send us a detailed enquiry about your project.
+                    </p>
+
+                    <a href="#">
+                        Email Us →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CTA
+         ========================= -->
+
+    <section class="quote-section">
+
+        <div class="container quote-container">
+
+            <div>
+
+                <span class="section-label">
+                    DE TSAKMA SOLAR ENERGY LTD
+                </span>
+
+                <h2>
+                    …Powering a
+                    <span>Brighter Tomorrow</span>
+                </h2>
+
+                <p>
+                    Renewable energy, electrical and technology solutions
+                    for a better and more connected future.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+
+            <div class="footer-brand">
+
+                <a
+                    href="../index.html"
+                    class="logo footer-logo"
+                >
+
+                    <img
+                        src="../images/logo.png"
+                        alt="DE TSAKMA SOLAR ENERGY LTD"
+                    >
+
+                </a>
+
+                <p>
+                    Renewable energy, electrical and technology
+                    solutions designed to power homes, businesses
+                    and a brighter future.
+                </p>
+
+                <span class="slogan">
+                    …Powering a Brighter Tomorrow
+                </span>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Company
+                </h3>
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="projects.html">
+                    Projects
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Services
+                </h3>
+
+                <a href="services.html">
+                    Solar Energy
+                </a>
+
+                <a href="services.html">
+                    Inverter & Battery
+                </a>
+
+                <a href="services.html">
+                    Electrical Installation
+                </a>
+
+                <a href="services.html">
+                    CCTV & Security
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact
+                </h3>
+
+                <a href="contact.html">
+                    Contact Us
+                </a>
+
+                <a href="contact.html">
+                    Request a Quote
+                </a>
+
+                <p>
+                    DE TSAKMA SOLAR ENERGY LTD
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+                    © 2026 DE TSAKMA SOLAR ENERGY LTD.
+                    All Rights Reserved.
+                </p>
+
+                <p>
+                    RC 8097864
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================
+         WHATSAPP FLOATING BUTTON
+         ========================= -->
+
+    <a
+        href="#"
+        class="whatsapp-button"
+        id="floatingWhatsApp"
+        aria-label="Chat with DE TSAKMA SOLAR ENERGY LTD"
+    >
+        💬
+    </a>
+
+
+
+    <script src="../js/script.js"></script>
+
+
+    <!-- =========================
+         FORM SCRIPT
+         ========================= -->
+
+    <script>
+
+        const form = document.getElementById("quoteForm");
+
+        form.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const name =
+                document.getElementById("name").value.trim();
+
+            const phone =
+                document.getElementById("phone").value.trim();
+
+            const email =
+                document.getElementById("email").value.trim();
+
+            const service =
+                document.getElementById("service").value;
+
+            const message =
+                document.getElementById("message").value.trim();
+
+
+            if (!name || !phone || !service || !message) {
+
+                alert(
+                    "Please complete all required fields."
+                );
+
+                return;
+
+            }
+
+
+            /*
+             * Temporary client-side submission.
+             *
+             * We will connect this form to the company's
+             * actual WhatsApp number/email/backend after
+             * the real contact details are provided.
+             */
+
+            alert(
+                "Thank you, " +
+                name +
+                "! Your quote request has been prepared. " +
+                "We will connect this form to the company's official contact channel next."
+            );
+
+        });
+
+    </script>
+
+</body>
+
+</html>
