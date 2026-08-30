@@ -1,491 +1,1505 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <title>Our Services | DE TSAKMA SOLAR ENERGY LTD</title>
+    <title>
+        Our Services | DE TSAKMA SOLAR ENERGY LTD
+    </title>
 
     <meta
         name="description"
-        content="DE TSAKMA SOLAR ENERGY LTD provides solar energy systems, inverter and battery solutions, electrical installations, CCTV, networking, smart home, IoT and technology services."
+        content="Explore solar energy, inverter and battery systems, electrical installation, CCTV, networking, smart home, IoT, programming, consultation and technical training services from DE TSAKMA SOLAR ENERGY LTD."
     >
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta
+        name="keywords"
+        content="solar installation Yola, solar energy Adamawa, inverter installation Yola, battery systems Nigeria, electrical installation Yola, CCTV installation Yola, smart home Yola, networking Yola, IoT Nigeria, DE TSAKMA Solar Energy"
+    >
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta
+        name="author"
+        content="DE TSAKMA SOLAR ENERGY LTD"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+
+    <!-- =========================
+         OPEN GRAPH
+         ========================= -->
+
+    <meta
+        property="og:title"
+        content="Services | DE TSAKMA SOLAR ENERGY LTD"
+    >
+
+    <meta
+        property="og:description"
+        content="Professional renewable energy, electrical and technology solutions from DE TSAKMA SOLAR ENERGY LTD."
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:image"
+        content="../images/logo.png"
+    >
+
+
+    <!-- =========================
+         FONTS
+         ========================= -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
         rel="stylesheet"
     >
 
-    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- =========================
+         MAIN CSS
+         ========================= -->
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+
+    <style>
+
+        /* =====================================================
+           SERVICES PAGE
+           ===================================================== */
+
+        .services-intro {
+            padding: 100px 0 60px;
+            background: white;
+        }
+
+
+        .services-intro-content {
+            max-width: 760px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+
+        .services-intro-content h2 {
+            font-size: clamp(30px, 4vw, 45px);
+            margin-bottom: 18px;
+        }
+
+
+        .services-intro-content h2 span {
+            color: var(--primary);
+        }
+
+
+        .services-intro-content p {
+            color: var(--light-text);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+
+
+        /* =====================================================
+           SERVICES GRID
+           ===================================================== */
+
+        .services-section {
+            padding: 60px 0 110px;
+            background: var(--light);
+        }
+
+
+        .services-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 24px;
+        }
+
+
+        .service-card {
+            position: relative;
+
+            padding: 35px 30px;
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius-md);
+
+            transition: var(--transition);
+
+            overflow: hidden;
+        }
+
+
+        .service-card::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 4px;
+
+            background: var(--primary);
+
+            transform: scaleX(0);
+
+            transform-origin: left;
+
+            transition: var(--transition);
+        }
+
+
+        .service-card:hover {
+            transform: translateY(-7px);
+
+            box-shadow: var(--shadow-md);
+
+            border-color:
+                rgba(8,127,206,0.20);
+        }
+
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+
+        .service-icon {
+            width: 65px;
+            height: 65px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 15px;
+
+            background:
+                rgba(8,127,206,0.10);
+
+            font-size: 30px;
+
+            margin-bottom: 23px;
+        }
+
+
+        .service-card h3 {
+            font-size: 20px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .service-card p {
+            color: var(--light-text);
+
+            font-size: 13px;
+
+            line-height: 1.75;
+
+            margin-bottom: 20px;
+        }
+
+
+        .service-list {
+            padding: 0;
+            margin: 0;
+
+            list-style: none;
+        }
+
+
+        .service-list li {
+            position: relative;
+
+            padding-left: 20px;
+
+            margin-bottom: 9px;
+
+            color: var(--secondary);
+
+            font-size: 12px;
+
+            line-height: 1.5;
+        }
+
+
+        .service-list li::before {
+            content: "✓";
+
+            position: absolute;
+
+            left: 0;
+
+            color: var(--primary);
+
+            font-weight: 800;
+        }
+
+
+
+        /* =====================================================
+           FEATURED SERVICE
+           ===================================================== */
+
+        .featured-service {
+            grid-column: span 2;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #087fce,
+                    #082b40
+                );
+
+            color: white;
+
+            border: none;
+        }
+
+
+        .featured-service h3,
+        .featured-service p,
+        .featured-service .service-list li {
+            color: white;
+        }
+
+
+        .featured-service .service-icon {
+            background:
+                rgba(255,255,255,0.15);
+        }
+
+
+        .featured-service .service-list li::before {
+            color: white;
+        }
+
+
+        .featured-service::before {
+            display: none;
+        }
+
+
+
+        /* =====================================================
+           WHY CHOOSE US
+           ===================================================== */
+
+        .why-section {
+            padding: 110px 0;
+
+            background: white;
+        }
+
+
+        .why-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 22px;
+        }
+
+
+        .why-card {
+            padding: 30px 24px;
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius-md);
+
+            background: white;
+
+            transition: var(--transition);
+        }
+
+
+        .why-card:hover {
+            transform: translateY(-6px);
+
+            box-shadow: var(--shadow-md);
+        }
+
+
+        .why-icon {
+            font-size: 30px;
+
+            margin-bottom: 18px;
+        }
+
+
+        .why-card h3 {
+            font-size: 17px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .why-card p {
+            color: var(--light-text);
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+
+        /* =====================================================
+           SERVICE PROCESS
+           ===================================================== */
+
+        .process-section {
+            padding: 100px 0;
+
+            background: var(--light);
+        }
+
+
+        .process-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 22px;
+        }
+
+
+        .process-card {
+            position: relative;
+
+            padding: 30px 24px;
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius-md);
+        }
+
+
+        .process-number {
+            font-family: "Poppins", sans-serif;
+
+            font-size: 35px;
+
+            font-weight: 800;
+
+            color:
+                rgba(8,127,206,0.20);
+
+            margin-bottom: 15px;
+        }
+
+
+        .process-card h3 {
+            font-size: 17px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .process-card p {
+            color: var(--light-text);
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+
+        /* =====================================================
+           SERVICE CONTACT
+           ===================================================== */
+
+        .service-contact {
+            padding: 80px 0;
+
+            background: white;
+        }
+
+
+        .service-contact-box {
+            padding: 45px;
+
+            background: var(--light);
+
+            border:
+                1px solid var(--border);
+
+            border-radius: var(--radius-lg);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 30px;
+        }
+
+
+        .service-contact-box h2 {
+            font-size: 30px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .service-contact-box h2 span {
+            color: var(--primary);
+        }
+
+
+        .service-contact-box p {
+            color: var(--light-text);
+
+            font-size: 13px;
+
+            max-width: 650px;
+        }
+
+
+        .service-contact-buttons {
+            display: flex;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+        }
+
+
+
+        /* =====================================================
+           RESPONSIVE
+           ===================================================== */
+
+        @media (max-width: 1050px) {
+
+            .services-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .featured-service {
+                grid-column: span 2;
+            }
+
+
+            .why-grid,
+            .process-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 760px) {
+
+            .services-intro,
+            .services-section,
+            .why-section,
+            .process-section,
+            .service-contact {
+                padding-top: 75px;
+
+                padding-bottom: 75px;
+            }
+
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .featured-service {
+                grid-column: span 1;
+            }
+
+
+            .why-grid,
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .service-contact-box {
+                padding: 30px;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+
+
+            .service-contact-buttons {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
 </head>
+
+
 
 <body>
 
-    <!-- =========================
-         HEADER
-         ========================= -->
 
-    <header class="header">
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
 
-        <div class="container nav-container">
+<header class="header">
 
-            <a href="../index.html" class="logo">
-                <img
-                    src="../images/logo.png"
-                    alt="DE TSAKMA SOLAR ENERGY LTD"
-                >
+    <div class="container nav-container">
+
+
+        <!-- LOGO -->
+
+        <a
+            href="../index.html"
+            class="logo"
+            aria-label="DE TSAKMA SOLAR ENERGY LTD Home"
+        >
+
+            <img
+                src="../images/logo.png"
+                alt="DE TSAKMA SOLAR ENERGY LTD"
+            >
+
+        </a>
+
+
+        <!-- MOBILE MENU -->
+
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="navbar"
+        >
+            ☰
+        </button>
+
+
+        <!-- NAVIGATION -->
+
+        <nav
+            class="navbar"
+            id="navbar"
+            aria-label="Main navigation"
+        >
+
+            <a href="../index.html">
+                Home
             </a>
 
-            <nav class="navbar">
 
-                <a href="../index.html">
-                    Home
-                </a>
+            <a href="about.html">
+                About
+            </a>
 
-                <a href="about.html">
-                    About
-                </a>
 
-                <a href="services.html" class="active">
-                    Services
-                </a>
-
-                <a href="projects.html">
-                    Projects
-                </a>
-
-                <a href="contact.html">
-                    Contact
-                </a>
-
-                <a href="contact.html" class="nav-quote">
-                    Get a Quote
-                </a>
-
-            </nav>
-
-            <button
-                class="menu-toggle"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
+            <a
+                href="services.html"
+                class="active"
             >
-                ☰
-            </button>
-
-        </div>
-
-    </header>
+                Services
+            </a>
 
 
-    <!-- =========================
-         PAGE HERO
-         ========================= -->
+            <a href="projects.html">
+                Projects
+            </a>
 
-    <section class="page-hero">
 
-        <div class="container page-hero-content">
+            <a href="contact.html">
+                Contact
+            </a>
 
-            <span class="section-label">
-                WHAT WE DO
+
+            <a
+                href="contact.html"
+                class="nav-quote"
+            >
+                Get a Quote
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     PAGE HERO
+     ===================================================== -->
+
+<section class="page-hero">
+
+    <div class="container page-hero-content">
+
+        <span class="section-label">
+            WHAT WE DO
+        </span>
+
+
+        <h1>
+
+            Our
+
+            <span>
+                Services
             </span>
 
-            <h1>
-                Professional Energy &
-                <span>Technology Solutions</span>
-            </h1>
+        </h1>
+
+
+        <p>
+            Professional renewable energy, electrical and technology
+            solutions designed around the needs of homes, businesses
+            and other clients.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SERVICES INTRO
+     ===================================================== -->
+
+<section class="services-intro">
+
+    <div class="container">
+
+        <div class="services-intro-content">
+
+            <span class="section-label">
+                OUR EXPERTISE
+            </span>
+
+
+            <h2>
+
+                Practical Solutions.
+
+                <span>
+                    Quality Service.
+                </span>
+
+            </h2>
+
 
             <p>
-                From reliable solar power systems to electrical,
-                security and smart technology solutions, DE TSAKMA
-                SOLAR ENERGY LTD provides practical solutions designed
-                around your needs.
+                At DE TSAKMA SOLAR ENERGY LTD, we bring together
+                renewable energy, electrical engineering and modern
+                technology to provide practical solutions for our
+                clients.
             </p>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- =========================
-         SERVICES
-         ========================= -->
 
-    <section class="services-section">
+<!-- =====================================================
+     SERVICES
+     ===================================================== -->
 
-        <div class="container">
+<section class="services-section">
 
-            <div class="section-heading">
+    <div class="container">
 
-                <span class="section-label">
-                    OUR SERVICES
-                </span>
 
-                <h2>
-                    Solutions Built for
-                    <span>Real-World Needs</span>
-                </h2>
+        <div class="services-grid">
+
+
+            <!-- =================================================
+                 SOLAR ENERGY
+                 ================================================= -->
+
+            <div class="service-card featured-service">
+
+                <div class="service-icon">
+                    ☀️
+                </div>
+
+
+                <h3>
+                    Solar Energy Systems
+                </h3>
+
 
                 <p>
-                    We combine renewable energy, electrical engineering
-                    and modern technology to deliver dependable solutions
-                    for homes, businesses and other facilities.
+                    We provide solar energy solutions designed to
+                    provide dependable power for homes, businesses
+                    and other applications.
                 </p>
+
+
+                <ul class="service-list">
+
+                    <li>
+                        Solar system design
+                    </li>
+
+                    <li>
+                        Solar panel installation
+                    </li>
+
+                    <li>
+                        Off-grid solar systems
+                    </li>
+
+                    <li>
+                        Solar system upgrades
+                    </li>
+
+                    <li>
+                        Solar maintenance
+                    </li>
+
+                </ul>
 
             </div>
 
 
-            <div class="services-grid">
 
+            <!-- =================================================
+                 INVERTER
+                 ================================================= -->
 
-                <!-- Solar Energy -->
+            <div class="service-card">
 
-                <article class="service-card">
+                <div class="service-icon">
+                    🔋
+                </div>
 
-                    <div class="service-icon">
-                        ☀️
-                    </div>
 
-                    <h3>
-                        Solar Energy Systems
-                    </h3>
+                <h3>
+                    Inverter & Battery Systems
+                </h3>
 
-                    <p>
-                        Solar power solutions designed to provide
-                        dependable and efficient energy for residential,
-                        commercial and other applications.
-                    </p>
 
-                    <a href="contact.html">
-                        Request Service →
-                    </a>
+                <p>
+                    Reliable backup and energy storage solutions
+                    for clients who need dependable power
+                    availability.
+                </p>
 
-                </article>
 
+                <ul class="service-list">
 
-                <!-- Inverter -->
+                    <li>
+                        Inverter installation
+                    </li>
 
-                <article class="service-card">
+                    <li>
+                        Battery installation
+                    </li>
 
-                    <div class="service-icon">
-                        🔋
-                    </div>
+                    <li>
+                        Energy storage systems
+                    </li>
 
-                    <h3>
-                        Inverter & Battery Systems
-                    </h3>
+                    <li>
+                        System configuration
+                    </li>
 
-                    <p>
-                        Installation and maintenance of inverter and
-                        battery systems for reliable backup and energy
-                        storage solutions.
-                    </p>
+                    <li>
+                        Maintenance and troubleshooting
+                    </li>
 
-                    <a href="contact.html">
-                        Request Service →
-                    </a>
+                </ul>
 
-                </article>
+            </div>
 
 
-                <!-- Electrical -->
 
-                <article class="service-card">
+            <!-- =================================================
+                 ELECTRICAL
+                 ================================================= -->
 
-                    <div class="service-icon">
-                        ⚡
-                    </div>
+            <div class="service-card">
 
-                    <h3>
-                        Electrical Installations
-                    </h3>
+                <div class="service-icon">
+                    ⚡
+                </div>
 
-                    <p>
-                        Professional electrical installation,
-                        maintenance and troubleshooting for residential
-                        and commercial environments.
-                    </p>
 
-                    <a href="contact.html">
-                        Request Service →
-                    </a>
+                <h3>
+                    Electrical Installation
+                </h3>
 
-                </article>
 
+                <p>
+                    Electrical installation and technical solutions
+                    for residential, commercial and other suitable
+                    applications.
+                </p>
 
-                <!-- CCTV -->
 
-                <article class="service-card">
+                <ul class="service-list">
 
-                    <div class="service-icon">
-                        📹
-                    </div>
+                    <li>
+                        Electrical wiring
+                    </li>
 
-                    <h3>
-                        CCTV & Security
-                    </h3>
+                    <li>
+                        Installation and upgrades
+                    </li>
 
-                    <p>
-                        Security camera and monitoring solutions designed
-                        to improve visibility, security and peace of mind.
-                    </p>
+                    <li>
+                        Protection systems
+                    </li>
 
-                    <a href="contact.html">
-                        Request Service →
-                    </a>
+                    <li>
+                        Electrical troubleshooting
+                    </li>
 
-                </article>
+                    <li>
+                        System maintenance
+                    </li>
 
+                </ul>
 
-                <!-- Smart Home -->
+            </div>
 
-                <article class="service-card">
 
-                    <div class="service-icon">
-                        🏠
-                    </div>
 
-                    <h3>
-                        Smart Home & Automation
-                    </h3>
+            <!-- =================================================
+                 CCTV
+                 ================================================= -->
 
-                    <p>
-                        Modern automation solutions that connect
-                        electrical systems and devices for improved
-                        convenience and control.
-                    </p>
+            <div class="service-card">
 
-                    <a href="contact.html">
-                        Request Service →
-                    </a>
+                <div class="service-icon">
+                    📹
+                </div>
 
-                </article>
 
+                <h3>
+                    CCTV & Security Systems
+                </h3>
 
-                <!-- Networking -->
 
-                <article class="service-card">
+                <p>
+                    Security camera and monitoring solutions to
+                    help clients monitor their homes, offices
+                    and properties.
+                </p>
 
-                    <div class="service-icon">
-                        🌐
-                    </div>
 
-                    <h3>
-                        Networking Solutions
-                    </h3>
+                <ul class="service-list">
 
-                    <p>
-                        Network installation and technology solutions
-                        designed to provide reliable connectivity for
-                        homes and businesses.
-                    </p>
+                    <li>
+                        CCTV installation
+                    </li>
 
-                    <a href="contact.html">
-                        Request Service →
-                    </a>
+                    <li>
+                        Camera configuration
+                    </li>
 
-                </article>
+                    <li>
+                        Monitoring systems
+                    </li>
 
+                    <li>
+                        System upgrades
+                    </li>
 
-                <!-- IoT -->
+                    <li>
+                        Maintenance
+                    </li>
 
-                <article class="service-card">
+                </ul>
 
-                    <div class="service-icon">
-                        📡
-                    </div>
+            </div>
 
-                    <h3>
-                        IoT & Control Systems
-                    </h3>
 
-                    <p>
-                        Intelligent monitoring and control solutions
-                        using connected devices and modern automation
-                        technologies.
-                    </p>
 
-                    <a href="contact.html">
-                        Request Service →
-                    </a>
+            <!-- =================================================
+                 NETWORKING
+                 ================================================= -->
 
-                </article>
+            <div class="service-card">
 
+                <div class="service-icon">
+                    🌐
+                </div>
 
-                <!-- Programming -->
 
-                <article class="service-card">
+                <h3>
+                    Networking Solutions
+                </h3>
 
-                    <div class="service-icon">
-                        💻
-                    </div>
 
-                    <h3>
-                        Programming & Technology
-                    </h3>
+                <p>
+                    Network infrastructure and connectivity solutions
+                    for homes, offices and other environments.
+                </p>
 
-                    <p>
-                        Software and technology solutions supporting
-                        automation, digital systems and modern business
-                        needs.
-                    </p>
 
-                    <a href="contact.html">
-                        Request Service →
-                    </a>
+                <ul class="service-list">
 
-                </article>
+                    <li>
+                        Network installation
+                    </li>
 
+                    <li>
+                        Structured cabling
+                    </li>
 
-                <!-- Consultation -->
+                    <li>
+                        Network configuration
+                    </li>
 
-                <article class="service-card">
+                    <li>
+                        Connectivity solutions
+                    </li>
 
-                    <div class="service-icon">
-                        🛠️
-                    </div>
+                    <li>
+                        Network troubleshooting
+                    </li>
 
-                    <h3>
-                        Consultation & Training
-                    </h3>
+                </ul>
 
-                    <p>
-                        Technical consultation and practical training
-                        to help clients understand, operate and maintain
-                        their systems effectively.
-                    </p>
+            </div>
 
-                    <a href="contact.html">
-                        Request Service →
-                    </a>
 
-                </article>
+
+            <!-- =================================================
+                 SMART HOME
+                 ================================================= -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🏠
+                </div>
+
+
+                <h3>
+                    Smart Home & Automation
+                </h3>
+
+
+                <p>
+                    Modern automation solutions that help make
+                    homes and spaces more connected, convenient
+                    and intelligent.
+                </p>
+
+
+                <ul class="service-list">
+
+                    <li>
+                        Smart lighting
+                    </li>
+
+                    <li>
+                        Home automation
+                    </li>
+
+                    <li>
+                        Remote control systems
+                    </li>
+
+                    <li>
+                        Smart device integration
+                    </li>
+
+                    <li>
+                        Automation solutions
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 IOT
+                 ================================================= -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    📡
+                </div>
+
+
+                <h3>
+                    IoT & Control Systems
+                </h3>
+
+
+                <p>
+                    Connected devices and control solutions for
+                    monitoring, automation and practical technical
+                    applications.
+                </p>
+
+
+                <ul class="service-list">
+
+                    <li>
+                        IoT solutions
+                    </li>
+
+                    <li>
+                        Device monitoring
+                    </li>
+
+                    <li>
+                        Automation systems
+                    </li>
+
+                    <li>
+                        Control systems
+                    </li>
+
+                    <li>
+                        Technical integration
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PROGRAMMING
+                 ================================================= -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    💻
+                </div>
+
+
+                <h3>
+                    Programming & Software Solutions
+                </h3>
+
+
+                <p>
+                    Technology and programming services for
+                    software, automation and digital solutions.
+                </p>
+
+
+                <ul class="service-list">
+
+                    <li>
+                        Software development
+                    </li>
+
+                    <li>
+                        Web solutions
+                    </li>
+
+                    <li>
+                        Automation programming
+                    </li>
+
+                    <li>
+                        Technical software solutions
+                    </li>
+
+                    <li>
+                        System integration
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CONSULTATION
+                 ================================================= -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🧰
+                </div>
+
+
+                <h3>
+                    Consultation & Technical Training
+                </h3>
+
+
+                <p>
+                    Technical guidance, consultation and training
+                    designed to help clients understand and work
+                    with modern energy and technology systems.
+                </p>
+
+
+                <ul class="service-list">
+
+                    <li>
+                        Technical consultation
+                    </li>
+
+                    <li>
+                        System planning
+                    </li>
+
+                    <li>
+                        Project guidance
+                    </li>
+
+                    <li>
+                        Technical training
+                    </li>
+
+                    <li>
+                        Energy and technology education
+                    </li>
+
+                </ul>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- =========================
-         WHY CHOOSE US
-         ========================= -->
 
-    <section class="why-us">
+<!-- =====================================================
+     WHY CHOOSE US
+     ===================================================== -->
 
-        <div class="container">
+<section class="why-section">
 
-            <div class="section-heading">
+    <div class="container">
 
-                <span class="section-label">
-                    WHY DE TSAKMA
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                WHY DE TSAKMA
+            </span>
+
+
+            <h2>
+
+                Why Choose
+
+                <span>
+                    Us?
                 </span>
 
-                <h2>
-                    Why Choose
-                    <span>Our Services?</span>
-                </h2>
+            </h2>
+
+
+            <p>
+                We focus on providing practical solutions while
+                maintaining quality, reliability and professional
+                service.
+            </p>
+
+        </div>
+
+
+
+        <div class="why-grid">
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    ⭐
+                </div>
+
+
+                <h3>
+                    Quality Focus
+                </h3>
+
 
                 <p>
-                    We focus on practical solutions, professional
-                    installation and dependable technical support.
+                    We approach each project with attention to
+                    quality workmanship and suitable solutions.
                 </p>
 
             </div>
 
 
-            <div class="why-grid">
 
-                <div class="why-card">
+            <div class="why-card">
 
-                    <div class="why-number">
-                        01
-                    </div>
-
-                    <h3>
-                        Quality Work
-                    </h3>
-
-                    <p>
-                        We aim to deliver quality workmanship and
-                        properly planned technical solutions.
-                    </p>
-
+                <div class="why-icon">
+                    🛠️
                 </div>
 
 
-                <div class="why-card">
+                <h3>
+                    Technical Approach
+                </h3>
 
-                    <div class="why-number">
-                        02
-                    </div>
 
-                    <h3>
-                        Reliable Solutions
-                    </h3>
+                <p>
+                    We combine electrical, renewable energy and
+                    technology knowledge to solve practical problems.
+                </p>
 
-                    <p>
-                        Our solutions are selected and designed around
-                        practical energy and technology requirements.
-                    </p>
+            </div>
 
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    🤝
                 </div>
 
 
-                <div class="why-card">
+                <h3>
+                    Client-Focused
+                </h3>
 
-                    <div class="why-number">
-                        03
-                    </div>
 
-                    <h3>
-                        Technical Expertise
-                    </h3>
+                <p>
+                    We listen to client requirements and work toward
+                    solutions that fit the intended application.
+                </p>
 
-                    <p>
-                        We bring electrical, renewable-energy and
-                        technology skills together in one service.
-                    </p>
+            </div>
 
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    💡
                 </div>
 
 
-                <div class="why-card">
+                <h3>
+                    Modern Solutions
+                </h3>
 
-                    <div class="why-number">
-                        04
-                    </div>
 
-                    <h3>
-                        Customer Support
-                    </h3>
-
-                    <p>
-                        We support clients beyond installation through
-                        maintenance, consultation and technical assistance.
-                    </p>
-
-                </div>
+                <p>
+                    We embrace renewable energy and modern technology
+                    to create useful and practical solutions.
+                </p>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- =========================
-         CALL TO ACTION
-         ========================= -->
 
-    <section class="quote-section">
+<!-- =====================================================
+     OUR PROCESS
+     ===================================================== -->
 
-        <div class="container quote-container">
+<section class="process-section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                HOW WE WORK
+            </span>
+
+
+            <h2>
+
+                Our Simple
+
+                <span>
+                    Process
+                </span>
+
+            </h2>
+
+
+            <p>
+                From understanding your needs to implementing a
+                suitable solution, we keep the process straightforward.
+            </p>
+
+        </div>
+
+
+
+        <div class="process-grid">
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    01
+                </div>
+
+
+                <h3>
+                    Consultation
+                </h3>
+
+
+                <p>
+                    We discuss your requirements, challenges and
+                    intended application.
+                </p>
+
+            </div>
+
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    02
+                </div>
+
+
+                <h3>
+                    Assessment
+                </h3>
+
+
+                <p>
+                    We assess the requirements and determine an
+                    appropriate technical approach.
+                </p>
+
+            </div>
+
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    03
+                </div>
+
+
+                <h3>
+                    Solution
+                </h3>
+
+
+                <p>
+                    We develop a practical solution based on the
+                    project requirements.
+                </p>
+
+            </div>
+
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    04
+                </div>
+
+
+                <h3>
+                    Implementation
+                </h3>
+
+
+                <p>
+                    We proceed with installation, configuration,
+                    testing and technical support as required.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT STRIP
+     ===================================================== -->
+
+<section class="service-contact">
+
+    <div class="container">
+
+        <div class="service-contact-box">
+
 
             <div>
 
@@ -493,168 +1507,306 @@
                     START YOUR PROJECT
                 </span>
 
+
                 <h2>
-                    Need a Reliable
-                    <span>Energy Solution?</span>
+
+                    Need a
+
+                    <span>
+                        Solution?
+                    </span>
+
                 </h2>
 
+
                 <p>
-                    Tell us what you need and our team can help you
-                    determine the right solution for your project.
+                    Tell us what you need and let's discuss the
+                    right solar, electrical or technology solution
+                    for your project.
                 </p>
 
             </div>
 
-            <a href="contact.html" class="btn btn-primary">
-                Request a Quote →
+
+            <div class="service-contact-buttons">
+
+                <a
+                    href="contact.html"
+                    class="btn btn-primary"
+                >
+                    Get a Quote →
+                </a>
+
+
+                <a
+                    href="https://wa.me/2348139904445"
+                    class="btn btn-secondary"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-brand">
+
+            <a
+                href="../index.html"
+                class="logo footer-logo"
+            >
+
+                <img
+                    src="../images/logo.png"
+                    alt="DE TSAKMA SOLAR ENERGY LTD"
+                >
+
+            </a>
+
+
+            <p>
+                Reliable solar energy, electrical and technology
+                solutions designed to power homes, businesses
+                and a brighter future.
+            </p>
+
+
+            <span class="slogan">
+                Quality Guaranteed Services!
+            </span>
+
+        </div>
+
+
+
+        <!-- COMPANY -->
+
+        <div class="footer-column">
+
+            <h3>
+                Company
+            </h3>
+
+
+            <a href="../index.html">
+                Home
+            </a>
+
+
+            <a href="about.html">
+                About Us
+            </a>
+
+
+            <a href="services.html">
+                Services
+            </a>
+
+
+            <a href="projects.html">
+                Projects
+            </a>
+
+
+            <a href="contact.html">
+                Contact
             </a>
 
         </div>
 
-    </section>
 
 
-    <!-- =========================
-         FOOTER
-         ========================= -->
+        <!-- SERVICES -->
 
-    <footer class="footer">
+        <div class="footer-column">
 
-        <div class="container footer-grid">
+            <h3>
+                Services
+            </h3>
 
 
-            <div class="footer-brand">
+            <a href="services.html">
+                Solar Energy
+            </a>
 
-                <a href="../index.html" class="logo footer-logo">
 
-                    <img
-                        src="../images/logo.png"
-                        alt="DE TSAKMA SOLAR ENERGY LTD"
-                    >
+            <a href="services.html">
+                Inverter & Battery
+            </a>
 
-                </a>
 
-                <p>
-                    Renewable energy, electrical and technology
-                    solutions designed to power homes, businesses
-                    and a brighter future.
-                </p>
+            <a href="services.html">
+                Electrical Installation
+            </a>
 
-                <span class="slogan">
-                    …Powering a Brighter Tomorrow
+
+            <a href="services.html">
+                CCTV & Security
+            </a>
+
+
+            <a href="services.html">
+                Smart Home & Automation
+            </a>
+
+
+            <a href="services.html">
+                Networking & IoT
+            </a>
+
+        </div>
+
+
+
+        <!-- CONTACT -->
+
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+
+            <a href="tel:+2348139904445">
+                📞 +234 813 990 4445
+            </a>
+
+
+            <a
+                href="https://wa.me/2348139904445"
+                target="_blank"
+                rel="noopener"
+            >
+                💬 WhatsApp
+            </a>
+
+
+            <a
+                href="mailto:detsakmasolarenergyltd@gmail.com"
+            >
+                📧 Email Us
+            </a>
+
+
+            <a
+                href="https://maps.app.goo.gl/gqwgfFvJYXa3xNCa8"
+                target="_blank"
+                rel="noopener"
+            >
+                📍 Yolde-pate Junction,
+                Yola South
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SOCIAL LINKS -->
+
+    <div class="container footer-social">
+
+        <a
+            href="https://www.facebook.com/Weacneconabtebjambexamhelp"
+            target="_blank"
+            rel="noopener"
+        >
+            Facebook
+        </a>
+
+
+        <a
+            href="https://www.instagram.com/nehemiah.peter?igsi=cjE2OXc5NGVvcmI1"
+            target="_blank"
+            rel="noopener"
+        >
+            Instagram
+        </a>
+
+
+        <a
+            href="https://www.tiktok.com/@shugabatsakma?_r=1&_t=ZS-99IbSkoyktB"
+            target="_blank"
+            rel="noopener"
+        >
+            TikTok
+        </a>
+
+    </div>
+
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <p>
+                ©
+                <span data-current-year>
+                    2026
                 </span>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h3>
-                    Company
-                </h3>
-
-                <a href="../index.html">
-                    Home
-                </a>
-
-                <a href="about.html">
-                    About Us
-                </a>
-
-                <a href="services.html">
-                    Services
-                </a>
-
-                <a href="projects.html">
-                    Projects
-                </a>
-
-            </div>
+                DE TSAKMA SOLAR ENERGY LTD.
+                All Rights Reserved.
+            </p>
 
 
-            <div class="footer-column">
-
-                <h3>
-                    Services
-                </h3>
-
-                <a href="services.html">
-                    Solar Energy
-                </a>
-
-                <a href="services.html">
-                    Inverter & Battery
-                </a>
-
-                <a href="services.html">
-                    Electrical Installation
-                </a>
-
-                <a href="services.html">
-                    CCTV & Security
-                </a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h3>
-                    Contact
-                </h3>
-
-                <a href="contact.html">
-                    Contact Us
-                </a>
-
-                <a href="contact.html">
-                    Request a Quote
-                </a>
-
-                <p>
-                    DE TSAKMA SOLAR ENERGY LTD
-                </p>
-
-            </div>
+            <p>
+                RC 8097864
+            </p>
 
         </div>
 
+    </div>
 
-        <div class="footer-bottom">
-
-            <div class="container">
-
-                <p>
-                    © 2026 DE TSAKMA SOLAR ENERGY LTD. All Rights Reserved.
-                </p>
-
-                <p>
-                    RC 8097864
-                </p>
-
-            </div>
-
-        </div>
-
-    </footer>
+</footer>
 
 
-    <!-- =========================
-         WHATSAPP
-         ========================= -->
 
-    <a
-        href="https://wa.me/"
-        class="whatsapp-button"
-        target="_blank"
-        rel="noopener"
-        aria-label="Chat with DE TSAKMA SOLAR ENERGY LTD on WhatsApp"
-    >
-        💬
-    </a>
+<!-- =====================================================
+     FLOATING WHATSAPP
+     ===================================================== -->
+
+<a
+    href="https://wa.me/2348139904445"
+    class="whatsapp-button"
+    target="_blank"
+    rel="noopener"
+    aria-label="Chat with DE TSAKMA SOLAR ENERGY LTD on WhatsApp"
+>
+    💬
+</a>
 
 
-    <script src="../js/script.js"></script>
+
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
+
+<script src="../js/script.js"></script>
+
 
 </body>
+
 </html>
