@@ -1349,3 +1349,143 @@ section {
         height: 60px;
     }
 }
+
+
+/* =========================
+   MOBILE NAVIGATION
+   ========================= */
+
+.navbar.show {
+    display: flex;
+}
+
+.header.scrolled {
+    box-shadow: var(--shadow-sm);
+}
+
+
+@media (max-width: 760px) {
+
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        padding: 20px;
+
+        background: white;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 5px;
+
+        box-shadow: var(--shadow-md);
+    }
+
+    .navbar.show {
+        display: flex;
+    }
+
+    .navbar a {
+        width: 100%;
+        padding: 13px 15px;
+    }
+
+    .navbar .nav-quote {
+        text-align: center;
+        margin-top: 8px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 42px;
+        height: 42px;
+
+        border: 1px solid var(--border);
+        border-radius: 8px;
+
+        background: white;
+        color: var(--secondary);
+
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+}
+
+/* =====================================================
+   HOMEPAGE CONTACT LINKS
+   ===================================================== */
+
+.contact-link {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+
+.contact-link:hover {
+    color: var(--primary);
+}
+
+
+.form-success {
+    display: none;
+
+    margin-top: 12px;
+    padding: 12px 15px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+    line-height: 1.6;
+
+    background: rgba(8, 127, 206, 0.08);
+
+    border: 1px solid rgba(8, 127, 206, 0.15);
+}
+
+
+/* =====================================================
+   FOOTER LOGO
+   ===================================================== */
+
+.footer-logo img {
+    display: block;
+    max-width: 180px;
+    height: auto;
+}
+
+
+/* =====================================================
+   CONTACT LINKS ON DARK BACKGROUNDS
+   ===================================================== */
+
+.contact-info .contact-link {
+    display: inline-block;
+    color: inherit;
+}
+
+
+.contact-info .contact-link:hover {
+    color: #73c8f5;
+}
+
+
+/* =====================================================
+   MOBILE CONTACT
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    .contact-link {
+        word-break: break-word;
+    }
+
+}

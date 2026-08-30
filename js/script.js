@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =====================================================
-       COMPANY CONTACT CONFIGURATION
+       COMPANY INFORMATION
        ===================================================== */
 
     const COMPANY = {
@@ -23,6 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         address:
             "Adjacent Urawise Pharmacy Ltd, Yolde-pate Junction, Yola South, Adamawa State.",
+
+        maps:
+            "https://maps.app.goo.gl/gqwgfFvJYXa3xNCa8",
 
         slogan:
             "…Powering a Brighter Tomorrow"
@@ -78,9 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-        /* =========================================
-           CLOSE MENU AFTER CLICKING A LINK
-           ========================================= */
+        /* Close menu when a link is clicked */
 
         const navLinks =
             navbar.querySelectorAll("a");
@@ -94,7 +95,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 function () {
 
 
-                    navbar.classList.remove("show");
+                    navbar.classList.remove(
+                        "show"
+                    );
 
 
                     menuToggle.setAttribute(
@@ -133,73 +136,82 @@ document.addEventListener("DOMContentLoaded", function () {
         currentPath.split("/").pop();
 
 
-    /*
-     * If the browser is displaying the root page,
-     * treat it as index.html.
-     */
-
     if (
         currentPage === "" ||
         currentPage === "/"
     ) {
 
-        currentPage = "index.html";
+        currentPage =
+            "index.html";
 
     }
 
 
-    const navLinks =
+    const navigationLinks =
         document.querySelectorAll(
             ".navbar a"
         );
 
 
-    navLinks.forEach(function (link) {
+    navigationLinks.forEach(
+        function (link) {
 
 
-        const href =
-            link.getAttribute("href");
+            const href =
+                link.getAttribute("href");
 
 
-        if (!href) {
-            return;
+            if (!href) {
+                return;
+            }
+
+
+            /*
+             * Homepage navigation uses
+             * section anchors.
+             */
+
+            if (
+                href.startsWith("#")
+            ) {
+
+                return;
+
+            }
+
+
+            if (
+                link.classList.contains(
+                    "nav-quote"
+                )
+            ) {
+
+                return;
+
+            }
+
+
+            const linkPage =
+                href.split("/").pop();
+
+
+            link.classList.remove(
+                "active"
+            );
+
+
+            if (
+                linkPage === currentPage
+            ) {
+
+                link.classList.add(
+                    "active"
+                );
+
+            }
+
         }
-
-
-        /*
-         * Ignore special buttons such as
-         * "Get a Quote".
-         */
-
-        if (
-            link.classList.contains(
-                "nav-quote"
-            )
-        ) {
-            return;
-        }
-
-
-        const linkPage =
-            href.split("/").pop();
-
-
-        /*
-         * Remove previously assigned active state.
-         */
-
-        link.classList.remove("active");
-
-
-        if (
-            linkPage === currentPage
-        ) {
-
-            link.classList.add("active");
-
-        }
-
-    });
+    );
 
 
 
@@ -208,7 +220,9 @@ document.addEventListener("DOMContentLoaded", function () {
        ===================================================== */
 
     const header =
-        document.querySelector(".header");
+        document.querySelector(
+            ".header"
+        );
 
 
     function updateHeader() {
@@ -219,7 +233,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        if (window.scrollY > 30) {
+        if (
+            window.scrollY > 30
+        ) {
 
             header.classList.add(
                 "scrolled"
@@ -250,7 +266,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =====================================================
-       SMOOTH INTERNAL LINKS
+       SMOOTH SCROLL
        ===================================================== */
 
     document
@@ -270,10 +286,6 @@ document.addEventListener("DOMContentLoaded", function () {
                             "href"
                         );
 
-
-                    /*
-                     * Ignore empty anchor links.
-                     */
 
                     if (
                         !targetId ||
@@ -315,16 +327,16 @@ document.addEventListener("DOMContentLoaded", function () {
        WHATSAPP QUOTE FORM
        ===================================================== */
 
-    const quoteForm =
+    const contactForm =
         document.getElementById(
-            "quoteForm"
+            "contactForm"
         );
 
 
-    if (quoteForm) {
+    if (contactForm) {
 
 
-        quoteForm.addEventListener(
+        contactForm.addEventListener(
             "submit",
             function (event) {
 
@@ -333,42 +345,80 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
                 /* =========================================
-                   GET FORM VALUES
+                   GET FORM ELEMENTS
+                   ========================================= */
+
+                const nameInput =
+                    document.getElementById(
+                        "name"
+                    );
+
+
+                const phoneInput =
+                    document.getElementById(
+                        "phone"
+                    );
+
+
+                const emailInput =
+                    document.getElementById(
+                        "email"
+                    );
+
+
+                const serviceInput =
+                    document.getElementById(
+                        "service"
+                    );
+
+
+                const messageInput =
+                    document.getElementById(
+                        "message"
+                    );
+
+
+                if (
+                    !nameInput ||
+                    !phoneInput ||
+                    !serviceInput ||
+                    !messageInput
+                ) {
+
+                    console.error(
+                        "Required contact form fields are missing."
+                    );
+
+                    return;
+
+                }
+
+
+
+                /* =========================================
+                   GET VALUES
                    ========================================= */
 
                 const name =
-                    document
-                        .getElementById("name")
-                        ?.value
-                        .trim();
+                    nameInput.value.trim();
 
 
                 const phone =
-                    document
-                        .getElementById("phone")
-                        ?.value
-                        .trim();
+                    phoneInput.value.trim();
 
 
                 const email =
-                    document
-                        .getElementById("email")
-                        ?.value
-                        .trim();
+                    emailInput
+                        ? emailInput.value.trim()
+                        : "";
 
 
                 const service =
-                    document
-                        .getElementById("service")
-                        ?.value
-                        .trim();
+                    serviceInput.value.trim();
 
 
                 const message =
-                    document
-                        .getElementById("message")
-                        ?.value
-                        .trim();
+                    messageInput.value.trim();
 
 
 
@@ -385,7 +435,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
                     alert(
-                        "Please complete all required fields before submitting your request."
+                        "Please complete all required fields before submitting your enquiry."
                     );
 
 
@@ -396,64 +446,77 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
                 /* =========================================
-                   CREATE WHATSAPP MESSAGE
+                   BUILD WHATSAPP MESSAGE
                    ========================================= */
 
-                const whatsappMessage =
+                const whatsappText =
 
                     "Hello " +
                     COMPANY.name +
-                    ",%0A%0A" +
+                    ",\n\n" +
 
-                    "*NEW QUOTE REQUEST*%0A" +
-                    "━━━━━━━━━━━━━━━━━━%0A%0A" +
+                    "*NEW WEBSITE ENQUIRY*\n" +
 
-                    "*Customer Information*%0A" +
+                    "━━━━━━━━━━━━━━━━━━\n\n" +
+
+                    "*Customer Information*\n" +
 
                     "Name: " +
-                    encodeURIComponent(name) +
-                    "%0A" +
+                    name +
+                    "\n" +
 
                     "Phone: " +
-                    encodeURIComponent(phone) +
-                    "%0A" +
+                    phone +
+                    "\n" +
 
                     "Email: " +
-                    encodeURIComponent(
-                        email || "Not provided"
+                    (
+                        email ||
+                        "Not provided"
                     ) +
-                    "%0A%0A" +
+                    "\n\n" +
 
-                    "*Service Required*%0A" +
+                    "*Service Required*\n" +
 
-                    encodeURIComponent(service) +
-                    "%0A%0A" +
+                    service +
+                    "\n\n" +
 
-                    "*Project Details*%0A" +
+                    "*Project Details*\n" +
 
-                    encodeURIComponent(message) +
-                    "%0A%0A" +
+                    message +
+                    "\n\n" +
 
-                    "━━━━━━━━━━━━━━━━━━%0A" +
+                    "━━━━━━━━━━━━━━━━━━\n" +
 
-                    "Sent through the DE TSAKMA Solar Energy website.";
+                    "Sent from the DE TSAKMA SOLAR ENERGY LTD website.";
 
 
 
                 /* =========================================
-                   CREATE WHATSAPP URL
+                   ENCODE MESSAGE
+                   ========================================= */
+
+                const encodedMessage =
+                    encodeURIComponent(
+                        whatsappText
+                    );
+
+
+
+                /* =========================================
+                   WHATSAPP URL
                    ========================================= */
 
                 const whatsappURL =
                     "https://wa.me/" +
                     COMPANY.whatsapp +
                     "?text=" +
-                    whatsappMessage;
+                    encodedMessage;
 
 
 
                 /* =========================================
-                   SHOW SUCCESS MESSAGE
+                   SUCCESS MESSAGE
                    ========================================= */
 
                 const successMessage =
@@ -469,11 +532,8 @@ document.addEventListener("DOMContentLoaded", function () {
                         "block";
 
 
-                    successMessage.innerHTML =
-                        "Your quote request is ready. " +
-                        "WhatsApp will open so you can send it to " +
-                        COMPANY.name +
-                        ".";
+                    successMessage.textContent =
+                        "Your enquiry is ready. Opening WhatsApp...";
 
                 }
 
@@ -483,11 +543,24 @@ document.addEventListener("DOMContentLoaded", function () {
                    OPEN WHATSAPP
                    ========================================= */
 
-                window.open(
-                    whatsappURL,
-                    "_blank",
-                    "noopener"
-                );
+                const whatsappWindow =
+                    window.open(
+                        whatsappURL,
+                        "_blank"
+                    );
+
+
+                /*
+                 * Some browsers may block
+                 * window.open.
+                 */
+
+                if (!whatsappWindow) {
+
+                    window.location.href =
+                        whatsappURL;
+
+                }
 
             }
         );
@@ -497,7 +570,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =====================================================
-       AUTO-CONNECT WHATSAPP BUTTONS
+       WHATSAPP BUTTONS
        ===================================================== */
 
     const whatsappButtons =
@@ -512,28 +585,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
             button.addEventListener(
                 "click",
-                function () {
+                function (event) {
 
 
-                    const defaultMessage =
+                    event.preventDefault();
+
+
+                    const message =
                         "Hello " +
                         COMPANY.name +
                         ", I would like to make an enquiry.";
 
 
-                    const url =
+                    const whatsappURL =
                         "https://wa.me/" +
                         COMPANY.whatsapp +
                         "?text=" +
                         encodeURIComponent(
-                            defaultMessage
+                            message
                         );
 
 
                     window.open(
-                        url,
-                        "_blank",
-                        "noopener"
+                        whatsappURL,
+                        "_blank"
                     );
 
                 }
@@ -545,7 +620,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =====================================================
-       UPDATE COPYRIGHT YEAR
+       CURRENT YEAR
        ===================================================== */
 
     const yearElements =
@@ -566,7 +641,52 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =====================================================
-       CONSOLE INFORMATION
+       EXTERNAL LINKS
+       ===================================================== */
+
+    const externalLinks =
+        document.querySelectorAll(
+            'a[target="_blank"]'
+        );
+
+
+    externalLinks.forEach(
+        function (link) {
+
+
+            /*
+             * Make sure external links
+             * have safe rel attributes.
+             */
+
+            const currentRel =
+                link.getAttribute("rel") ||
+                "";
+
+
+            if (
+                !currentRel.includes(
+                    "noopener"
+                )
+            ) {
+
+                link.setAttribute(
+                    "rel",
+                    (
+                        currentRel +
+                        " noopener"
+                    ).trim()
+                );
+
+            }
+
+        }
+    );
+
+
+
+    /* =====================================================
+       WEBSITE INITIALIZATION
        ===================================================== */
 
     console.log(
