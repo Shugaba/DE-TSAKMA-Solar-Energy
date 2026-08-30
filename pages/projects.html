@@ -2,174 +2,479 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <title>Our Projects | DE TSAKMA SOLAR ENERGY LTD</title>
+    <title>
+        Our Projects | DE TSAKMA SOLAR ENERGY LTD
+    </title>
 
     <meta
         name="description"
-        content="Explore solar energy, inverter, electrical and technology projects by DE TSAKMA SOLAR ENERGY LTD."
+        content="Explore solar energy, electrical, security, networking and technology projects by DE TSAKMA SOLAR ENERGY LTD."
     >
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta
+        name="keywords"
+        content="DE TSAKMA Solar Energy projects, solar projects Yola, solar installation Adamawa, electrical projects Yola, CCTV projects, inverter installation"
+    >
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta
+        name="author"
+        content="DE TSAKMA SOLAR ENERGY LTD"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
         rel="stylesheet"
     >
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
 
     <style>
-        /* =========================
-           PROJECT PAGE
-           ========================= */
 
-        .portfolio-section {
-            padding: 110px 0;
-            background: var(--light);
+        /* =====================================================
+           PROJECTS INTRO
+           ===================================================== */
+
+        .projects-intro {
+            padding: 100px 0 60px;
+            background: white;
         }
+
+
+        .projects-intro-content {
+            max-width: 760px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+
+        .projects-intro-content h2 {
+            font-size: clamp(30px, 4vw, 45px);
+            margin-bottom: 18px;
+        }
+
+
+        .projects-intro-content h2 span {
+            color: var(--primary);
+        }
+
+
+        .projects-intro-content p {
+            color: var(--light-text);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+
+
+        /* =====================================================
+           PROJECT FILTER
+           ===================================================== */
+
+        .project-filter-section {
+            padding: 10px 0 45px;
+            background: white;
+        }
+
 
         .project-filters {
             display: flex;
             justify-content: center;
+            align-items: center;
             flex-wrap: wrap;
             gap: 10px;
-            margin-bottom: 45px;
         }
+
 
         .project-filter {
             border: 1px solid var(--border);
             background: white;
             color: var(--secondary);
-            padding: 10px 20px;
-            border-radius: 50px;
-            font-size: 13px;
-            font-weight: 700;
+
+            padding: 10px 18px;
+
+            border-radius: 30px;
+
+            font-family: "Inter", sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+
             cursor: pointer;
+
             transition: var(--transition);
         }
+
 
         .project-filter:hover,
         .project-filter.active {
             background: var(--primary);
-            border-color: var(--primary);
             color: white;
+            border-color: var(--primary);
         }
 
-        .portfolio-grid {
+
+
+        /* =====================================================
+           PROJECTS
+           ===================================================== */
+
+        .projects-section {
+            padding: 50px 0 110px;
+            background: var(--light);
+        }
+
+
+        .projects-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 25px;
         }
 
-        .portfolio-card {
-            overflow: hidden;
+
+        .project-card {
             background: white;
+
+            border: 1px solid var(--border);
+
             border-radius: var(--radius-md);
-            box-shadow: var(--shadow-sm);
+
+            overflow: hidden;
+
             transition: var(--transition);
         }
 
-        .portfolio-card:hover {
+
+        .project-card:hover {
             transform: translateY(-7px);
             box-shadow: var(--shadow-md);
         }
 
-        .portfolio-image {
-            height: 260px;
-            overflow: hidden;
+
+        /* =====================================================
+           PROJECT IMAGE PLACEHOLDER
+           ===================================================== */
+
+        .project-image {
             position: relative;
-            background: #dfeaf1;
-        }
 
-        .portfolio-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
+            height: 230px;
 
-        .portfolio-card:hover .portfolio-image img {
-            transform: scale(1.05);
-        }
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-        .portfolio-placeholder {
-            width: 100%;
-            height: 100%;
-            display: grid;
-            place-items: center;
-            font-size: 65px;
             background:
                 linear-gradient(
                     135deg,
                     #087fce,
                     #082b40
                 );
+
+            overflow: hidden;
         }
 
-        .portfolio-category {
+
+        .project-image::after {
+            content: "";
+
             position: absolute;
-            top: 15px;
-            left: 15px;
-            padding: 7px 12px;
-            border-radius: 50px;
-            background: rgba(255,255,255,0.95);
+
+            width: 220px;
+            height: 220px;
+
+            border-radius: 50%;
+
+            border: 1px solid
+                rgba(255,255,255,0.15);
+        }
+
+
+        .project-placeholder {
+            position: relative;
+            z-index: 2;
+
+            text-align: center;
+
+            color: white;
+        }
+
+
+        .project-placeholder-icon {
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+
+        .project-placeholder strong {
+            display: block;
+
+            font-family: "Poppins", sans-serif;
+
+            font-size: 15px;
+        }
+
+
+        .project-placeholder span {
+            display: block;
+
+            margin-top: 5px;
+
+            color: #cceeff;
+
+            font-size: 11px;
+        }
+
+
+
+        /* =====================================================
+           PROJECT CONTENT
+           ===================================================== */
+
+        .project-content {
+            padding: 25px;
+        }
+
+
+        .project-category {
+            display: inline-block;
+
+            padding: 5px 10px;
+
+            border-radius: 20px;
+
+            background:
+                rgba(8,127,206,0.10);
+
             color: var(--primary);
+
             font-size: 10px;
-            font-weight: 800;
+
+            font-weight: 700;
+
             text-transform: uppercase;
-            letter-spacing: 0.8px;
+
+            letter-spacing: 0.5px;
+
+            margin-bottom: 12px;
         }
 
-        .portfolio-info {
-            padding: 23px;
+
+        .project-content h3 {
+            font-size: 19px;
+            margin-bottom: 10px;
         }
 
-        .portfolio-info h3 {
-            font-size: 18px;
-            margin-bottom: 9px;
-        }
 
-        .portfolio-info p {
+        .project-content p {
             color: var(--light-text);
+
             font-size: 13px;
+
+            line-height: 1.7;
+
             margin-bottom: 15px;
         }
 
-        .portfolio-location {
-            color: var(--primary);
-            font-size: 12px;
-            font-weight: 700;
+
+        .project-details {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
         }
 
-        .project-note {
-            margin-top: 50px;
-            padding: 25px;
-            border-radius: var(--radius-md);
+
+        .project-detail {
+            font-size: 11px;
+
+            color: var(--secondary);
+
+            padding: 5px 9px;
+
+            background: var(--light);
+
+            border-radius: 5px;
+        }
+
+
+
+        /* =====================================================
+           COMING SOON
+           ===================================================== */
+
+        .projects-note {
+            margin-top: 45px;
+
+            padding: 25px 30px;
+
             background: white;
-            border: 1px dashed var(--border);
+
+            border:
+                1px solid var(--border);
+
+            border-radius: var(--radius-md);
+
             text-align: center;
         }
 
-        .project-note p {
-            color: var(--light-text);
-            font-size: 13px;
-        }
 
-        .project-note strong {
+        .projects-note strong {
+            display: block;
+
             color: var(--secondary);
+
+            font-size: 15px;
+
+            margin-bottom: 7px;
         }
 
+
+        .projects-note p {
+            color: var(--light-text);
+
+            font-size: 12px;
+
+            margin: 0;
+        }
+
+
+
+        /* =====================================================
+           CTA
+           ===================================================== */
+
+        .projects-cta {
+            padding: 100px 0;
+
+            background: white;
+        }
+
+
+        .projects-cta-box {
+            position: relative;
+
+            overflow: hidden;
+
+            padding: 55px;
+
+            border-radius: var(--radius-lg);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #087fce,
+                    #082b40
+                );
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 35px;
+        }
+
+
+        .projects-cta-box::after {
+            content: "";
+
+            position: absolute;
+
+            right: -100px;
+            bottom: -130px;
+
+            width: 320px;
+            height: 320px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.15);
+        }
+
+
+        .projects-cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+
+        .projects-cta-content .section-label {
+            color: #cceeff;
+        }
+
+
+        .projects-cta-content h2 {
+            font-size: clamp(28px, 4vw, 40px);
+
+            margin-bottom: 12px;
+        }
+
+
+        .projects-cta-content h2 span {
+            color: #cceeff;
+        }
+
+
+        .projects-cta-content p {
+            max-width: 650px;
+
+            color: rgba(255,255,255,0.80);
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+        .projects-cta .btn {
+            position: relative;
+            z-index: 2;
+
+            flex-shrink: 0;
+        }
+
+
+
+        /* =====================================================
+           RESPONSIVE
+           ===================================================== */
 
         @media (max-width: 1050px) {
 
-            .portfolio-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .projects-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
 
         }
@@ -177,16 +482,35 @@
 
         @media (max-width: 760px) {
 
-            .portfolio-section {
-                padding: 75px 0;
+            .projects-intro,
+            .projects-section,
+            .projects-cta {
+                padding-top: 75px;
+                padding-bottom: 75px;
             }
 
-            .portfolio-grid {
+
+            .projects-grid {
                 grid-template-columns: 1fr;
             }
 
-            .portfolio-image {
-                height: 230px;
+
+            .project-filter-section {
+                padding-bottom: 30px;
+            }
+
+
+            .projects-cta-box {
+                padding: 35px 28px;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+
+
+            .project-image {
+                height: 210px;
             }
 
         }
@@ -196,457 +520,714 @@
 </head>
 
 
+
 <body>
 
 
-    <!-- =========================
-         HEADER
-         ========================= -->
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
 
-    <header class="header">
+<header class="header">
 
-        <div class="container nav-container">
+    <div class="container nav-container">
 
-            <a href="../index.html" class="logo">
 
-                <img
-                    src="../images/logo.png"
-                    alt="DE TSAKMA SOLAR ENERGY LTD"
-                >
+        <a
+            href="../index.html"
+            class="logo"
+            aria-label="DE TSAKMA SOLAR ENERGY LTD Home"
+        >
 
+            <img
+                src="../images/logo.png"
+                alt="DE TSAKMA SOLAR ENERGY LTD"
+            >
+
+        </a>
+
+
+
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="navbar"
+        >
+            ☰
+        </button>
+
+
+
+        <nav
+            class="navbar"
+            id="navbar"
+            aria-label="Main navigation"
+        >
+
+            <a href="../index.html">
+                Home
             </a>
 
 
-            <nav class="navbar">
-
-                <a href="../index.html">
-                    Home
-                </a>
-
-                <a href="about.html">
-                    About
-                </a>
-
-                <a href="services.html">
-                    Services
-                </a>
-
-                <a href="projects.html" class="active">
-                    Projects
-                </a>
-
-                <a href="contact.html">
-                    Contact
-                </a>
-
-                <a href="contact.html" class="nav-quote">
-                    Get a Quote
-                </a>
-
-            </nav>
+            <a href="about.html">
+                About
+            </a>
 
 
-            <button
-                class="menu-toggle"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
+            <a href="services.html">
+                Services
+            </a>
+
+
+            <a
+                href="projects.html"
+                class="active"
             >
-                ☰
-            </button>
-
-        </div>
-
-    </header>
+                Projects
+            </a>
 
 
+            <a href="contact.html">
+                Contact
+            </a>
 
-    <!-- =========================
-         PAGE HERO
-         ========================= -->
 
-    <section class="page-hero">
+            <a
+                href="contact.html"
+                class="nav-quote"
+            >
+                Get a Quote
+            </a>
 
-        <div class="container page-hero-content">
+        </nav>
 
-            <span class="section-label">
-                OUR WORK
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     PAGE HERO
+     ===================================================== -->
+
+<section class="page-hero">
+
+    <div class="container page-hero-content">
+
+        <span class="section-label">
+            OUR WORK
+        </span>
+
+
+        <h1>
+
+            Our
+
+            <span>
+                Projects
             </span>
 
-            <h1>
-                Projects That
-                <span>Power Progress</span>
-            </h1>
+        </h1>
+
+
+        <p>
+            A growing portfolio of renewable energy, electrical,
+            security and technology solutions delivered for
+            different applications.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     INTRO
+     ===================================================== -->
+
+<section class="projects-intro">
+
+    <div class="container">
+
+        <div class="projects-intro-content">
+
+            <span class="section-label">
+                PROJECT PORTFOLIO
+            </span>
+
+
+            <h2>
+
+                Solutions Built for
+
+                <span>
+                    Real Needs
+                </span>
+
+            </h2>
+
 
             <p>
-                Explore some of the energy, electrical and technology
-                solutions delivered by DE TSAKMA SOLAR ENERGY LTD.
+                Every project starts with understanding the client's
+                requirements and developing a practical solution.
+                Our portfolio will continue to grow as we document
+                more of our completed work.
             </p>
 
         </div>
 
-    </section>
+    </div>
 
+</section>
 
 
-    <!-- =========================
-         PROJECT PORTFOLIO
-         ========================= -->
 
-    <section class="portfolio-section">
+<!-- =====================================================
+     FILTER
+     ===================================================== -->
 
-        <div class="container">
+<section class="project-filter-section">
 
+    <div class="container">
 
-            <div class="section-heading">
+        <div class="project-filters">
 
-                <span class="section-label">
-                    PROJECT PORTFOLIO
-                </span>
+            <button
+                class="project-filter active"
+                data-filter="all"
+            >
+                All Projects
+            </button>
 
-                <h2>
-                    Our Recent
-                    <span>Work</span>
-                </h2>
 
-                <p>
-                    Every project starts with understanding the client's
-                    needs and ends with a practical solution.
-                </p>
+            <button
+                class="project-filter"
+                data-filter="solar"
+            >
+                Solar Energy
+            </button>
 
-            </div>
 
+            <button
+                class="project-filter"
+                data-filter="electrical"
+            >
+                Electrical
+            </button>
 
 
-            <!-- FILTERS -->
+            <button
+                class="project-filter"
+                data-filter="security"
+            >
+                CCTV & Security
+            </button>
 
-            <div class="project-filters">
 
-                <button
-                    class="project-filter active"
-                    data-filter="all"
-                >
-                    All Projects
-                </button>
-
-                <button
-                    class="project-filter"
-                    data-filter="solar"
-                >
-                    Solar
-                </button>
-
-                <button
-                    class="project-filter"
-                    data-filter="inverter"
-                >
-                    Inverter
-                </button>
-
-                <button
-                    class="project-filter"
-                    data-filter="electrical"
-                >
-                    Electrical
-                </button>
-
-                <button
-                    class="project-filter"
-                    data-filter="technology"
-                >
-                    Technology
-                </button>
-
-            </div>
-
-
-
-            <!-- PROJECTS -->
-
-            <div class="portfolio-grid">
-
-
-                <!-- PROJECT 1 -->
-
-                <article
-                    class="portfolio-card"
-                    data-category="solar"
-                >
-
-                    <div class="portfolio-image">
-
-                        <div class="portfolio-placeholder">
-                            ☀️
-                        </div>
-
-                        <span class="portfolio-category">
-                            Solar
-                        </span>
-
-                    </div>
-
-                    <div class="portfolio-info">
-
-                        <h3>
-                            Residential Solar Power System
-                        </h3>
-
-                        <p>
-                            Solar energy solution designed to provide
-                            dependable power for a residential property.
-                        </p>
-
-                        <span class="portfolio-location">
-                            📍 Adamawa State
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- PROJECT 2 -->
-
-                <article
-                    class="portfolio-card"
-                    data-category="inverter"
-                >
-
-                    <div class="portfolio-image">
-
-                        <div class="portfolio-placeholder">
-                            🔋
-                        </div>
-
-                        <span class="portfolio-category">
-                            Inverter
-                        </span>
-
-                    </div>
-
-                    <div class="portfolio-info">
-
-                        <h3>
-                            Inverter & Battery Installation
-                        </h3>
-
-                        <p>
-                            Backup energy storage solution designed
-                            for reliable power availability.
-                        </p>
-
-                        <span class="portfolio-location">
-                            📍 Yola
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- PROJECT 3 -->
-
-                <article
-                    class="portfolio-card"
-                    data-category="electrical"
-                >
-
-                    <div class="portfolio-image">
-
-                        <div class="portfolio-placeholder">
-                            ⚡
-                        </div>
-
-                        <span class="portfolio-category">
-                            Electrical
-                        </span>
-
-                    </div>
-
-                    <div class="portfolio-info">
-
-                        <h3>
-                            Electrical Installation
-                        </h3>
-
-                        <p>
-                            Professional electrical installation and
-                            distribution work for a modern facility.
-                        </p>
-
-                        <span class="portfolio-location">
-                            📍 Adamawa State
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- PROJECT 4 -->
-
-                <article
-                    class="portfolio-card"
-                    data-category="solar"
-                >
-
-                    <div class="portfolio-image">
-
-                        <div class="portfolio-placeholder">
-                            🔆
-                        </div>
-
-                        <span class="portfolio-category">
-                            Solar
-                        </span>
-
-                    </div>
-
-                    <div class="portfolio-info">
-
-                        <h3>
-                            Commercial Solar Solution
-                        </h3>
-
-                        <p>
-                            Solar power system designed to support
-                            commercial energy requirements.
-                        </p>
-
-                        <span class="portfolio-location">
-                            📍 Northern Nigeria
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- PROJECT 5 -->
-
-                <article
-                    class="portfolio-card"
-                    data-category="technology"
-                >
-
-                    <div class="portfolio-image">
-
-                        <div class="portfolio-placeholder">
-                            📡
-                        </div>
-
-                        <span class="portfolio-category">
-                            Technology
-                        </span>
-
-                    </div>
-
-                    <div class="portfolio-info">
-
-                        <h3>
-                            Smart Technology Solution
-                        </h3>
-
-                        <p>
-                            Connected technology and control solutions
-                            designed for improved monitoring and control.
-                        </p>
-
-                        <span class="portfolio-location">
-                            📍 Yola
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- PROJECT 6 -->
-
-                <article
-                    class="portfolio-card"
-                    data-category="electrical"
-                >
-
-                    <div class="portfolio-image">
-
-                        <div class="portfolio-placeholder">
-                            🏠
-                        </div>
-
-                        <span class="portfolio-category">
-                            Electrical
-                        </span>
-
-                    </div>
-
-                    <div class="portfolio-info">
-
-                        <h3>
-                            Residential Electrical Project
-                        </h3>
-
-                        <p>
-                            Electrical installation and improvement
-                            work for a residential property.
-                        </p>
-
-                        <span class="portfolio-location">
-                            📍 Adamawa State
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-            </div>
-
-
-
-            <div class="project-note">
-
-                <p>
-                    <strong>More projects coming soon.</strong>
-                    We are continuously expanding our project portfolio.
-                    Contact us to discuss your own energy or technology project.
-                </p>
-
-            </div>
-
+            <button
+                class="project-filter"
+                data-filter="technology"
+            >
+                Technology
+            </button>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
 
-    <!-- =========================
-         CALL TO ACTION
-         ========================= -->
+<!-- =====================================================
+     PROJECT GRID
+     ===================================================== -->
 
-    <section class="quote-section">
+<section class="projects-section">
 
-        <div class="container quote-container">
+    <div class="container">
 
-            <div>
+
+        <div class="projects-grid">
+
+
+            <!-- PROJECT 1 -->
+
+            <article
+                class="project-card"
+                data-category="solar"
+            >
+
+                <div class="project-image">
+
+                    <div class="project-placeholder">
+
+                        <div class="project-placeholder-icon">
+                            ☀️
+                        </div>
+
+                        <strong>
+                            Solar Energy Project
+                        </strong>
+
+                        <span>
+                            Project photo coming soon
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        Solar Energy
+                    </span>
+
+
+                    <h3>
+                        Solar Power Installation
+                    </h3>
+
+
+                    <p>
+                        Solar energy system designed to provide
+                        dependable power for a residential or
+                        commercial application.
+                    </p>
+
+
+                    <div class="project-details">
+
+                        <span class="project-detail">
+                            Solar System
+                        </span>
+
+                        <span class="project-detail">
+                            Installation
+                        </span>
+
+                        <span class="project-detail">
+                            Energy Solution
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PROJECT 2 -->
+
+            <article
+                class="project-card"
+                data-category="solar"
+            >
+
+                <div class="project-image">
+
+                    <div class="project-placeholder">
+
+                        <div class="project-placeholder-icon">
+                            🔋
+                        </div>
+
+                        <strong>
+                            Inverter Project
+                        </strong>
+
+                        <span>
+                            Project photo coming soon
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        Solar & Storage
+                    </span>
+
+
+                    <h3>
+                        Inverter & Battery System
+                    </h3>
+
+
+                    <p>
+                        Backup power and energy storage solution
+                        configured according to the client's
+                        power requirements.
+                    </p>
+
+
+                    <div class="project-details">
+
+                        <span class="project-detail">
+                            Inverter
+                        </span>
+
+                        <span class="project-detail">
+                            Battery
+                        </span>
+
+                        <span class="project-detail">
+                            Backup Power
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PROJECT 3 -->
+
+            <article
+                class="project-card"
+                data-category="electrical"
+            >
+
+                <div class="project-image">
+
+                    <div class="project-placeholder">
+
+                        <div class="project-placeholder-icon">
+                            ⚡
+                        </div>
+
+                        <strong>
+                            Electrical Project
+                        </strong>
+
+                        <span>
+                            Project photo coming soon
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        Electrical
+                    </span>
+
+
+                    <h3>
+                        Electrical Installation
+                    </h3>
+
+
+                    <p>
+                        Electrical installation and system
+                        improvement designed for safe and
+                        dependable operation.
+                    </p>
+
+
+                    <div class="project-details">
+
+                        <span class="project-detail">
+                            Wiring
+                        </span>
+
+                        <span class="project-detail">
+                            Installation
+                        </span>
+
+                        <span class="project-detail">
+                            Protection
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PROJECT 4 -->
+
+            <article
+                class="project-card"
+                data-category="security"
+            >
+
+                <div class="project-image">
+
+                    <div class="project-placeholder">
+
+                        <div class="project-placeholder-icon">
+                            📹
+                        </div>
+
+                        <strong>
+                            CCTV Project
+                        </strong>
+
+                        <span>
+                            Project photo coming soon
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        Security
+                    </span>
+
+
+                    <h3>
+                        CCTV Security Installation
+                    </h3>
+
+
+                    <p>
+                        Security camera installation designed
+                        to provide property monitoring and
+                        surveillance capabilities.
+                    </p>
+
+
+                    <div class="project-details">
+
+                        <span class="project-detail">
+                            CCTV
+                        </span>
+
+                        <span class="project-detail">
+                            Monitoring
+                        </span>
+
+                        <span class="project-detail">
+                            Security
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PROJECT 5 -->
+
+            <article
+                class="project-card"
+                data-category="technology"
+            >
+
+                <div class="project-image">
+
+                    <div class="project-placeholder">
+
+                        <div class="project-placeholder-icon">
+                            🌐
+                        </div>
+
+                        <strong>
+                            Networking Project
+                        </strong>
+
+                        <span>
+                            Project photo coming soon
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        Technology
+                    </span>
+
+
+                    <h3>
+                        Network Infrastructure
+                    </h3>
+
+
+                    <p>
+                        Network installation and connectivity
+                        solution designed for reliable communication
+                        between connected devices.
+                    </p>
+
+
+                    <div class="project-details">
+
+                        <span class="project-detail">
+                            Networking
+                        </span>
+
+                        <span class="project-detail">
+                            Connectivity
+                        </span>
+
+                        <span class="project-detail">
+                            Infrastructure
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PROJECT 6 -->
+
+            <article
+                class="project-card"
+                data-category="technology"
+            >
+
+                <div class="project-image">
+
+                    <div class="project-placeholder">
+
+                        <div class="project-placeholder-icon">
+                            🏠
+                        </div>
+
+                        <strong>
+                            Smart Home Project
+                        </strong>
+
+                        <span>
+                            Project photo coming soon
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        Automation
+                    </span>
+
+
+                    <h3>
+                        Smart Home & Automation
+                    </h3>
+
+
+                    <p>
+                        Technology solution integrating smart
+                        devices and automation for improved
+                        control and convenience.
+                    </p>
+
+
+                    <div class="project-details">
+
+                        <span class="project-detail">
+                            Smart Home
+                        </span>
+
+                        <span class="project-detail">
+                            Automation
+                        </span>
+
+                        <span class="project-detail">
+                            IoT
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+
+        <!-- NOTE -->
+
+        <div class="projects-note">
+
+            <strong>
+                More Projects Coming Soon
+            </strong>
+
+
+            <p>
+                We are preparing additional project documentation
+                and photographs to showcase more of our completed
+                installations and technical work.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+     ===================================================== -->
+
+<section class="projects-cta">
+
+    <div class="container">
+
+        <div class="projects-cta-box">
+
+
+            <div class="projects-cta-content">
 
                 <span class="section-label">
-                    HAVE A PROJECT?
+                    HAVE A PROJECT IN MIND?
                 </span>
 
+
                 <h2>
+
                     Let's Build Your
-                    <span>Energy Solution</span>
+
+                    <span>
+                        Solution
+                    </span>
+
                 </h2>
 
+
                 <p>
-                    Tell us about your requirements and let our team
-                    help you develop a suitable solution.
+                    Whether you need a solar power system,
+                    inverter and battery solution, electrical
+                    installation, CCTV or a technology project,
+                    we would be happy to discuss your requirements.
                 </p>
 
             </div>
@@ -656,218 +1237,344 @@
                 href="contact.html"
                 class="btn btn-primary"
             >
-                Start Your Project →
+                Start a Project →
             </a>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
 
-    <!-- =========================
-         FOOTER
-         ========================= -->
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
 
-    <footer class="footer">
+<footer class="footer">
 
-        <div class="container footer-grid">
+    <div class="container footer-grid">
 
 
-            <div class="footer-brand">
+        <!-- BRAND -->
 
-                <a
-                    href="../index.html"
-                    class="logo footer-logo"
+        <div class="footer-brand">
+
+            <a
+                href="../index.html"
+                class="logo footer-logo"
+            >
+
+                <img
+                    src="../images/logo.png"
+                    alt="DE TSAKMA SOLAR ENERGY LTD"
                 >
 
-                    <img
-                        src="../images/logo.png"
-                        alt="DE TSAKMA SOLAR ENERGY LTD"
-                    >
-
-                </a>
-
-                <p>
-                    Renewable energy, electrical and technology
-                    solutions designed to power homes, businesses
-                    and a brighter future.
-                </p>
-
-                <span class="slogan">
-                    …Powering a Brighter Tomorrow
-                </span>
-
-            </div>
+            </a>
 
 
-            <div class="footer-column">
-
-                <h3>
-                    Company
-                </h3>
-
-                <a href="../index.html">
-                    Home
-                </a>
-
-                <a href="about.html">
-                    About Us
-                </a>
-
-                <a href="services.html">
-                    Services
-                </a>
-
-                <a href="projects.html">
-                    Projects
-                </a>
-
-            </div>
+            <p>
+                Renewable energy, electrical and technology
+                solutions designed to power homes, businesses
+                and a brighter future.
+            </p>
 
 
-            <div class="footer-column">
-
-                <h3>
-                    Services
-                </h3>
-
-                <a href="services.html">
-                    Solar Energy
-                </a>
-
-                <a href="services.html">
-                    Inverter & Battery
-                </a>
-
-                <a href="services.html">
-                    Electrical Installation
-                </a>
-
-                <a href="services.html">
-                    CCTV & Security
-                </a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h3>
-                    Contact
-                </h3>
-
-                <a href="contact.html">
-                    Contact Us
-                </a>
-
-                <a href="contact.html">
-                    Request a Quote
-                </a>
-
-                <p>
-                    DE TSAKMA SOLAR ENERGY LTD
-                </p>
-
-            </div>
+            <span class="slogan">
+                Quality Guaranteed Services!
+            </span>
 
         </div>
 
 
-        <div class="footer-bottom">
 
-            <div class="container">
+        <!-- COMPANY -->
 
-                <p>
-                    © 2026 DE TSAKMA SOLAR ENERGY LTD.
-                    All Rights Reserved.
-                </p>
+        <div class="footer-column">
 
-                <p>
-                    RC 8097864
-                </p>
+            <h3>
+                Company
+            </h3>
 
-            </div>
+
+            <a href="../index.html">
+                Home
+            </a>
+
+
+            <a href="about.html">
+                About Us
+            </a>
+
+
+            <a href="services.html">
+                Services
+            </a>
+
+
+            <a href="projects.html">
+                Projects
+            </a>
+
+
+            <a href="contact.html">
+                Contact
+            </a>
 
         </div>
 
-    </footer>
+
+
+        <!-- SERVICES -->
+
+        <div class="footer-column">
+
+            <h3>
+                Services
+            </h3>
+
+
+            <a href="services.html">
+                Solar Energy
+            </a>
+
+
+            <a href="services.html">
+                Inverter & Battery
+            </a>
+
+
+            <a href="services.html">
+                Electrical Installation
+            </a>
+
+
+            <a href="services.html">
+                CCTV & Security
+            </a>
+
+
+            <a href="services.html">
+                Smart Home & Automation
+            </a>
+
+        </div>
 
 
 
-    <!-- =========================
-         WHATSAPP
-         ========================= -->
+        <!-- CONTACT -->
 
-    <a
-        href="https://wa.me/"
-        class="whatsapp-button"
-        target="_blank"
-        rel="noopener"
-        aria-label="Chat with DE TSAKMA SOLAR ENERGY LTD on WhatsApp"
-    >
-        💬
-    </a>
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
 
 
+            <a href="tel:+2348139904445">
+                📞 +234 813 990 4445
+            </a>
 
-    <script src="../js/script.js"></script>
+
+            <a
+                href="https://wa.me/2348139904445"
+                target="_blank"
+                rel="noopener"
+            >
+                💬 WhatsApp
+            </a>
 
 
-    <!-- =========================
-         PROJECT FILTER SCRIPT
-         ========================= -->
+            <a
+                href="mailto:detsakmasolarenergyltd@gmail.com"
+            >
+                📧 Email Us
+            </a>
 
-    <script>
+
+            <a
+                href="https://maps.app.goo.gl/gqwgfFvJYXa3xNCa8"
+                target="_blank"
+                rel="noopener"
+            >
+                📍 Yolde-pate Junction,
+                Yola South
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SOCIAL LINKS -->
+
+    <div class="container footer-social">
+
+        <a
+            href="https://www.facebook.com/Weacneconabtebjambexamhelp"
+            target="_blank"
+            rel="noopener"
+        >
+            Facebook
+        </a>
+
+
+        <a
+            href="https://www.instagram.com/nehemiah.peter?igsi=cjE2OXc5NGVvcmI1"
+            target="_blank"
+            rel="noopener"
+        >
+            Instagram
+        </a>
+
+
+        <a
+            href="https://www.tiktok.com/@shugabatsakma?_r=1&_t=ZS-99IbSkoyktB"
+            target="_blank"
+            rel="noopener"
+        >
+            TikTok
+        </a>
+
+    </div>
+
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <p>
+                © 2026 DE TSAKMA SOLAR ENERGY LTD.
+                All Rights Reserved.
+            </p>
+
+
+            <p>
+                RC 8097864
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     WHATSAPP
+     ===================================================== -->
+
+<a
+    href="https://wa.me/2348139904445"
+    class="whatsapp-button"
+    target="_blank"
+    rel="noopener"
+    aria-label="Chat with DE TSAKMA SOLAR ENERGY LTD on WhatsApp"
+>
+    💬
+</a>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        /* ==========================================
+           PROJECT FILTER
+           ========================================== */
 
         const filters =
-            document.querySelectorAll(".project-filter");
+            document.querySelectorAll(
+                ".project-filter"
+            );
+
 
         const projects =
-            document.querySelectorAll(".portfolio-card");
+            document.querySelectorAll(
+                ".project-card"
+            );
 
 
-        filters.forEach(filter => {
+        filters.forEach(function (filter) {
 
-            filter.addEventListener("click", () => {
-
-                const selected =
-                    filter.getAttribute("data-filter");
-
-
-                filters.forEach(button => {
-                    button.classList.remove("active");
-                });
-
-                filter.classList.add("active");
+            filter.addEventListener(
+                "click",
+                function () {
 
 
-                projects.forEach(project => {
-
-                    const category =
-                        project.getAttribute("data-category");
+                    const selected =
+                        filter.dataset.filter;
 
 
-                    if (
-                        selected === "all" ||
-                        category === selected
-                    ) {
+                    filters.forEach(
+                        function (item) {
 
-                        project.style.display = "";
+                            item.classList.remove(
+                                "active"
+                            );
 
-                    } else {
+                        }
+                    );
 
-                        project.style.display = "none";
 
-                    }
+                    filter.classList.add(
+                        "active"
+                    );
 
-                });
 
-            });
+                    projects.forEach(
+                        function (project) {
 
-        });
+                            const category =
+                                project.dataset.category;
 
-    </script>
+
+                            if (
+                                selected === "all" ||
+                                category === selected
+                            ) {
+
+                                project.style.display =
+                                    "block";
+
+                            } else {
+
+                                project.style.display =
+                                    "none";
+
+                            }
+
+                        }
+                    );
+
+                }
+            );
+
+        }
+
+    });
+
+});
+
+</script>
+
+
+
+<script src="../js/script.js"></script>
 
 </body>
 
