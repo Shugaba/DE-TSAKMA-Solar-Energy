@@ -2,40 +2,106 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <title>About Us | DE TSAKMA SOLAR ENERGY LTD</title>
+    <title>
+        About Us | DE TSAKMA SOLAR ENERGY LTD
+    </title>
 
     <meta
         name="description"
-        content="Learn about DE TSAKMA SOLAR ENERGY LTD, a renewable energy, electrical and technology solutions company."
+        content="Learn about DE TSAKMA SOLAR ENERGY LTD, a renewable energy, electrical and technology solutions company in Yola, Adamawa State, Nigeria."
     >
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta
+        name="keywords"
+        content="DE TSAKMA Solar Energy, solar energy Yola, solar company Adamawa, renewable energy Nigeria, inverter installation Yola, electrical services Yola, CCTV Yola, smart home Nigeria"
+    >
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+    <meta
+        name="author"
+        content="DE TSAKMA SOLAR ENERGY LTD"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+
+    <!-- =========================
+         OPEN GRAPH
+         ========================= -->
+
+    <meta
+        property="og:title"
+        content="About Us | DE TSAKMA SOLAR ENERGY LTD"
+    >
+
+    <meta
+        property="og:description"
+        content="Learn about DE TSAKMA SOLAR ENERGY LTD and our renewable energy, electrical and technology solutions."
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:image"
+        content="../images/logo.png"
+    >
+
+
+    <!-- =========================
+         FONTS
+         ========================= -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
         rel="stylesheet"
     >
 
-    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- =========================
+         MAIN CSS
+         ========================= -->
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
 
     <style>
 
-        /* =========================
+        /* =====================================================
            ABOUT PAGE
-           ========================= */
+           ===================================================== */
 
         .about-story {
             padding: 110px 0;
             background: white;
         }
+
 
         .story-grid {
             display: grid;
@@ -44,14 +110,17 @@
             align-items: center;
         }
 
+
         .story-visual {
             min-height: 480px;
             position: relative;
         }
 
+
         .story-box {
             width: 100%;
             min-height: 480px;
+
             border-radius: var(--radius-lg);
             overflow: hidden;
 
@@ -75,17 +144,22 @@
             color: white;
 
             box-shadow: var(--shadow-lg);
+
+            text-align: center;
         }
+
 
         .story-box-icon {
             font-size: 95px;
             margin-bottom: 20px;
         }
 
+
         .story-box strong {
             font-family: "Poppins", sans-serif;
             font-size: 25px;
         }
+
 
         .story-box span {
             margin-top: 7px;
@@ -93,18 +167,22 @@
             font-size: 13px;
         }
 
+
         .story-content .section-label {
             margin-bottom: 15px;
         }
+
 
         .story-content h2 {
             font-size: clamp(30px, 4vw, 46px);
             margin-bottom: 22px;
         }
 
+
         .story-content h2 span {
             color: var(--primary);
         }
+
 
         .story-content p {
             color: var(--light-text);
@@ -113,14 +191,16 @@
         }
 
 
-        /* =========================
+
+        /* =====================================================
            MISSION / VISION
-           ========================= */
+           ===================================================== */
 
         .mission-section {
             padding: 100px 0;
             background: var(--light);
         }
+
 
         .mission-grid {
             display: grid;
@@ -128,34 +208,48 @@
             gap: 25px;
         }
 
+
         .mission-card {
             padding: 40px;
+
             background: white;
+
             border-radius: var(--radius-md);
+
             border: 1px solid var(--border);
+
             transition: var(--transition);
         }
+
 
         .mission-card:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-md);
         }
 
+
         .mission-icon {
             width: 60px;
             height: 60px;
+
             border-radius: 13px;
+
             background: rgba(8,127,206,0.10);
+
             display: grid;
             place-items: center;
+
             font-size: 28px;
+
             margin-bottom: 22px;
         }
+
 
         .mission-card h3 {
             font-size: 21px;
             margin-bottom: 12px;
         }
+
 
         .mission-card p {
             color: var(--light-text);
@@ -163,14 +257,16 @@
         }
 
 
-        /* =========================
+
+        /* =====================================================
            VALUES
-           ========================= */
+           ===================================================== */
 
         .values-section {
             padding: 110px 0;
             background: white;
         }
+
 
         .values-grid {
             display: grid;
@@ -178,32 +274,47 @@
             gap: 22px;
         }
 
+
         .value-card {
             padding: 30px 25px;
+
             border: 1px solid var(--border);
+
             border-radius: var(--radius-md);
+
             background: white;
+
             transition: var(--transition);
         }
 
+
         .value-card:hover {
             transform: translateY(-6px);
+
             box-shadow: var(--shadow-md);
+
             border-color: rgba(8,127,206,0.20);
         }
 
+
         .value-number {
             color: rgba(8,127,206,0.25);
+
             font-family: "Poppins", sans-serif;
+
             font-size: 30px;
+
             font-weight: 800;
+
             margin-bottom: 15px;
         }
+
 
         .value-card h3 {
             font-size: 17px;
             margin-bottom: 10px;
         }
+
 
         .value-card p {
             color: var(--light-text);
@@ -211,57 +322,152 @@
         }
 
 
-        /* =========================
+
+        /* =====================================================
            COMPANY INFORMATION
-           ========================= */
+           ===================================================== */
 
         .company-info {
             padding: 90px 0;
             background: var(--light);
         }
 
+
         .company-info-box {
             padding: 45px;
+
             background: white;
+
             border-radius: var(--radius-lg);
+
             box-shadow: var(--shadow-sm);
         }
+
 
         .company-info-box h2 {
             font-size: 30px;
             margin-bottom: 25px;
         }
 
+
         .company-details {
             display: grid;
+
             grid-template-columns: 1fr 1fr;
+
             gap: 0;
+
             border-top: 1px solid var(--border);
+
             border-left: 1px solid var(--border);
         }
 
+
         .company-detail {
             padding: 20px;
+
             border-right: 1px solid var(--border);
+
             border-bottom: 1px solid var(--border);
         }
 
+
         .company-detail span {
             display: block;
+
             color: var(--light-text);
+
             font-size: 11px;
+
             margin-bottom: 5px;
         }
 
+
         .company-detail strong {
             color: var(--secondary);
+
             font-size: 14px;
         }
 
 
-        /* =========================
+
+        /* =====================================================
+           ABOUT CONTACT STRIP
+           ===================================================== */
+
+        .about-contact-strip {
+            padding: 75px 0;
+            background: white;
+        }
+
+
+        .about-contact-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .about-contact-card {
+            display: block;
+
+            padding: 28px 22px;
+
+            background: var(--light);
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius-md);
+
+            text-align: center;
+
+            text-decoration: none;
+
+            transition: var(--transition);
+        }
+
+
+        .about-contact-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow: var(--shadow-md);
+        }
+
+
+        .about-contact-card-icon {
+            font-size: 28px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .about-contact-card h3 {
+            color: var(--secondary);
+
+            font-size: 16px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .about-contact-card p {
+            color: var(--light-text);
+
+            font-size: 12px;
+
+            line-height: 1.6;
+
+            margin: 0;
+        }
+
+
+
+        /* =====================================================
            RESPONSIVE
-           ========================= */
+           ===================================================== */
 
         @media (max-width: 1050px) {
 
@@ -277,33 +483,46 @@
             .about-story,
             .mission-section,
             .values-section,
-            .company-info {
+            .company-info,
+            .about-contact-strip {
                 padding: 75px 0;
             }
 
+
             .story-grid {
                 grid-template-columns: 1fr;
+
                 gap: 45px;
             }
+
 
             .story-box,
             .story-visual {
                 min-height: 380px;
             }
 
+
             .mission-grid {
                 grid-template-columns: 1fr;
             }
+
 
             .values-grid {
                 grid-template-columns: 1fr;
             }
 
+
             .company-info-box {
                 padding: 28px;
             }
 
+
             .company-details {
+                grid-template-columns: 1fr;
+            }
+
+
+            .about-contact-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -314,18 +533,768 @@
 </head>
 
 
+
 <body>
 
 
-    <!-- =========================
-         HEADER
-         ========================= -->
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
 
-    <header class="header">
+<header class="header">
 
-        <div class="container nav-container">
+    <div class="container nav-container">
 
-            <a href="../index.html" class="logo">
+
+        <!-- LOGO -->
+
+        <a
+            href="../index.html"
+            class="logo"
+            aria-label="DE TSAKMA SOLAR ENERGY LTD Home"
+        >
+
+            <img
+                src="../images/logo.png"
+                alt="DE TSAKMA SOLAR ENERGY LTD"
+            >
+
+        </a>
+
+
+        <!-- MOBILE MENU -->
+
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="navbar"
+        >
+            ☰
+        </button>
+
+
+        <!-- NAVIGATION -->
+
+        <nav
+            class="navbar"
+            id="navbar"
+            aria-label="Main navigation"
+        >
+
+            <a href="../index.html">
+                Home
+            </a>
+
+
+            <a
+                href="about.html"
+                class="active"
+            >
+                About
+            </a>
+
+
+            <a href="services.html">
+                Services
+            </a>
+
+
+            <a href="projects.html">
+                Projects
+            </a>
+
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+
+            <a
+                href="contact.html"
+                class="nav-quote"
+            >
+                Get a Quote
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     PAGE HERO
+     ===================================================== -->
+
+<section class="page-hero">
+
+    <div class="container page-hero-content">
+
+        <span class="section-label">
+            ABOUT DE TSAKMA
+        </span>
+
+
+        <h1>
+
+            Powering a
+
+            <span>
+                Brighter Tomorrow
+            </span>
+
+        </h1>
+
+
+        <p>
+            We provide renewable energy, electrical and technology
+            solutions designed to help homes and businesses access
+            dependable and modern power solutions.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     COMPANY STORY
+     ===================================================== -->
+
+<section class="about-story">
+
+    <div class="container story-grid">
+
+
+        <!-- VISUAL -->
+
+        <div class="story-visual">
+
+            <div class="story-box">
+
+                <div class="story-box-icon">
+                    ☀️
+                </div>
+
+
+                <strong>
+                    DE TSAKMA
+                </strong>
+
+
+                <span>
+                    SOLAR ENERGY LTD
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CONTENT -->
+
+        <div class="story-content">
+
+            <span class="section-label">
+                WHO WE ARE
+            </span>
+
+
+            <h2>
+
+                Energy &
+
+                <span>
+                    Technology Solutions
+                </span>
+
+                You Can Depend On
+
+            </h2>
+
+
+            <p>
+                DE TSAKMA SOLAR ENERGY LTD is a renewable energy,
+                electrical and technology solutions company focused
+                on providing practical and dependable solutions for
+                homes, businesses and other clients.
+            </p>
+
+
+            <p>
+                Our services cover solar energy systems, inverter
+                and battery solutions, electrical installations,
+                CCTV and security systems, networking, smart home
+                solutions, IoT and control systems, programming,
+                consultation and technical training.
+            </p>
+
+
+            <p>
+                We believe that reliable energy and practical
+                technology can make a meaningful difference in
+                everyday life. Our goal is to provide solutions
+                that are properly planned, professionally installed
+                and suited to the needs of each client.
+            </p>
+
+
+            <a
+                href="services.html"
+                class="btn btn-primary"
+            >
+                Explore Our Services →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MISSION & VISION
+     ===================================================== -->
+
+<section class="mission-section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                OUR DIRECTION
+            </span>
+
+
+            <h2>
+
+                Mission &
+
+                <span>
+                    Vision
+                </span>
+
+            </h2>
+
+
+            <p>
+                Our work is guided by a commitment to practical
+                energy solutions, quality service and technological
+                innovation.
+            </p>
+
+        </div>
+
+
+
+        <div class="mission-grid">
+
+
+            <!-- MISSION -->
+
+            <div class="mission-card">
+
+                <div class="mission-icon">
+                    🎯
+                </div>
+
+
+                <h3>
+                    Our Mission
+                </h3>
+
+
+                <p>
+                    To provide practical, reliable and quality
+                    renewable energy, electrical and technology
+                    solutions that meet the needs of our clients.
+                </p>
+
+            </div>
+
+
+
+            <!-- VISION -->
+
+            <div class="mission-card">
+
+                <div class="mission-icon">
+                    🔭
+                </div>
+
+
+                <h3>
+                    Our Vision
+                </h3>
+
+
+                <p>
+                    To contribute to a brighter future through
+                    accessible renewable energy, dependable
+                    electrical systems and innovative technology.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CORE VALUES
+     ===================================================== -->
+
+<section class="values-section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                WHAT WE STAND FOR
+            </span>
+
+
+            <h2>
+
+                Our Core
+
+                <span>
+                    Values
+                </span>
+
+            </h2>
+
+
+            <p>
+                The principles that guide how we approach our
+                work and serve our clients.
+            </p>
+
+        </div>
+
+
+
+        <div class="values-grid">
+
+
+            <!-- QUALITY -->
+
+            <div class="value-card">
+
+                <div class="value-number">
+                    01
+                </div>
+
+
+                <h3>
+                    Quality
+                </h3>
+
+
+                <p>
+                    We strive for quality workmanship and solutions
+                    that are carefully planned for their intended use.
+                </p>
+
+            </div>
+
+
+
+            <!-- RELIABILITY -->
+
+            <div class="value-card">
+
+                <div class="value-number">
+                    02
+                </div>
+
+
+                <h3>
+                    Reliability
+                </h3>
+
+
+                <p>
+                    We focus on dependable solutions and responsible
+                    technical service.
+                </p>
+
+            </div>
+
+
+
+            <!-- INNOVATION -->
+
+            <div class="value-card">
+
+                <div class="value-number">
+                    03
+                </div>
+
+
+                <h3>
+                    Innovation
+                </h3>
+
+
+                <p>
+                    We embrace renewable energy and modern technology
+                    to create practical solutions for today's needs.
+                </p>
+
+            </div>
+
+
+
+            <!-- INTEGRITY -->
+
+            <div class="value-card">
+
+                <div class="value-number">
+                    04
+                </div>
+
+
+                <h3>
+                    Integrity
+                </h3>
+
+
+                <p>
+                    We value honest communication, professional
+                    conduct and responsible service.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     COMPANY INFORMATION
+     ===================================================== -->
+
+<section class="company-info">
+
+    <div class="container">
+
+        <div class="company-info-box">
+
+
+            <span class="section-label">
+                COMPANY PROFILE
+            </span>
+
+
+            <h2>
+                DE TSAKMA SOLAR ENERGY LTD
+            </h2>
+
+
+            <div class="company-details">
+
+
+                <div class="company-detail">
+
+                    <span>
+                        Company Name
+                    </span>
+
+                    <strong>
+                        DE TSAKMA SOLAR ENERGY LTD
+                    </strong>
+
+                </div>
+
+
+
+                <div class="company-detail">
+
+                    <span>
+                        Registration
+                    </span>
+
+                    <strong>
+                        RC 8097864
+                    </strong>
+
+                </div>
+
+
+
+                <div class="company-detail">
+
+                    <span>
+                        Primary Focus
+                    </span>
+
+                    <strong>
+                        Renewable Energy & Technology
+                    </strong>
+
+                </div>
+
+
+
+                <div class="company-detail">
+
+                    <span>
+                        Location
+                    </span>
+
+                    <strong>
+                        Yola South, Adamawa State, Nigeria
+                    </strong>
+
+                </div>
+
+
+
+                <div class="company-detail">
+
+                    <span>
+                        Phone
+                    </span>
+
+                    <strong>
+                        +234 813 990 4445
+                    </strong>
+
+                </div>
+
+
+
+                <div class="company-detail">
+
+                    <span>
+                        Email
+                    </span>
+
+                    <strong>
+                        detsakmasolarenergyltd@gmail.com
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT STRIP
+     ===================================================== -->
+
+<section class="about-contact-strip">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                GET IN TOUCH
+            </span>
+
+
+            <h2>
+
+                Let's Start Your
+
+                <span>
+                    Project
+                </span>
+
+            </h2>
+
+
+            <p>
+                Have a solar, electrical or technology project?
+                Contact our team today.
+            </p>
+
+        </div>
+
+
+
+        <div class="about-contact-grid">
+
+
+            <!-- CALL -->
+
+            <a
+                href="tel:+2348139904445"
+                class="about-contact-card"
+            >
+
+                <div class="about-contact-card-icon">
+                    📞
+                </div>
+
+
+                <h3>
+                    Call Us
+                </h3>
+
+
+                <p>
+                    +234 813 990 4445
+                </p>
+
+            </a>
+
+
+
+            <!-- WHATSAPP -->
+
+            <a
+                href="https://wa.me/2348139904445"
+                class="about-contact-card"
+                target="_blank"
+                rel="noopener"
+            >
+
+                <div class="about-contact-card-icon">
+                    💬
+                </div>
+
+
+                <h3>
+                    WhatsApp
+                </h3>
+
+
+                <p>
+                    Chat with our team directly
+                </p>
+
+            </a>
+
+
+
+            <!-- EMAIL -->
+
+            <a
+                href="mailto:detsakmasolarenergyltd@gmail.com"
+                class="about-contact-card"
+            >
+
+                <div class="about-contact-card-icon">
+                    📧
+                </div>
+
+
+                <h3>
+                    Email Us
+                </h3>
+
+
+                <p>
+                    detsakmasolarenergyltd@gmail.com
+                </p>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CALL TO ACTION
+     ===================================================== -->
+
+<section class="quote-section">
+
+    <div class="container quote-container">
+
+
+        <div>
+
+            <span class="section-label">
+                LET'S WORK TOGETHER
+            </span>
+
+
+            <h2>
+
+                Ready for a
+
+                <span>
+                    Better Solution?
+                </span>
+
+            </h2>
+
+
+            <p>
+                Whether you need solar power, an inverter system,
+                electrical installation or a technology solution,
+                we're ready to discuss your requirements.
+            </p>
+
+        </div>
+
+
+        <a
+            href="contact.html"
+            class="btn btn-primary"
+        >
+            Contact Us →
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-brand">
+
+            <a
+                href="../index.html"
+                class="logo footer-logo"
+            >
 
                 <img
                     src="../images/logo.png"
@@ -335,610 +1304,229 @@
             </a>
 
 
-            <nav class="navbar">
-
-                <a href="../index.html">
-                    Home
-                </a>
-
-                <a href="about.html" class="active">
-                    About
-                </a>
-
-                <a href="services.html">
-                    Services
-                </a>
-
-                <a href="projects.html">
-                    Projects
-                </a>
-
-                <a href="contact.html">
-                    Contact
-                </a>
-
-                <a href="contact.html" class="nav-quote">
-                    Get a Quote
-                </a>
-
-            </nav>
-
-
-            <button
-                class="menu-toggle"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
-            >
-                ☰
-            </button>
-
-        </div>
-
-    </header>
-
-
-
-    <!-- =========================
-         PAGE HERO
-         ========================= -->
-
-    <section class="page-hero">
-
-        <div class="container page-hero-content">
-
-            <span class="section-label">
-                ABOUT DE TSAKMA
-            </span>
-
-            <h1>
-                Powering a
-                <span>Brighter Tomorrow</span>
-            </h1>
-
             <p>
-                We provide renewable energy, electrical and technology
-                solutions designed to help homes and businesses access
-                dependable and modern power solutions.
+                Reliable solar energy, electrical and technology
+                solutions designed to power homes, businesses
+                and a brighter future.
             </p>
 
-        </div>
 
-    </section>
-
-
-
-    <!-- =========================
-         COMPANY STORY
-         ========================= -->
-
-    <section class="about-story">
-
-        <div class="container story-grid">
-
-
-            <div class="story-visual">
-
-                <div class="story-box">
-
-                    <div class="story-box-icon">
-                        ☀️
-                    </div>
-
-                    <strong>
-                        DE TSAKMA
-                    </strong>
-
-                    <span>
-                        SOLAR ENERGY LTD
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <div class="story-content">
-
-                <span class="section-label">
-                    WHO WE ARE
-                </span>
-
-                <h2>
-                    Energy &
-                    <span>Technology Solutions</span>
-                    You Can Depend On
-                </h2>
-
-                <p>
-                    DE TSAKMA SOLAR ENERGY LTD is a company focused on
-                    renewable energy, electrical installations and
-                    technology solutions.
-                </p>
-
-                <p>
-                    Our services cover solar energy systems, inverter
-                    and battery solutions, electrical installations,
-                    CCTV, networking, smart home solutions, IoT and
-                    control systems, programming, consultation and
-                    technical training.
-                </p>
-
-                <p>
-                    We believe that reliable energy and practical
-                    technology can make a meaningful difference in
-                    homes, businesses and communities.
-                </p>
-
-                <a
-                    href="services.html"
-                    class="btn btn-primary"
-                >
-                    Explore Our Services →
-                </a>
-
-            </div>
+            <span class="slogan">
+                Quality Guaranteed Services!
+            </span>
 
         </div>
 
-    </section>
 
 
+        <!-- COMPANY -->
 
-    <!-- =========================
-         MISSION & VISION
-         ========================= -->
+        <div class="footer-column">
 
-    <section class="mission-section">
+            <h3>
+                Company
+            </h3>
 
-        <div class="container">
 
-            <div class="section-heading">
+            <a href="../index.html">
+                Home
+            </a>
 
-                <span class="section-label">
-                    OUR DIRECTION
-                </span>
 
-                <h2>
-                    Mission &
-                    <span>Vision</span>
-                </h2>
+            <a href="about.html">
+                About Us
+            </a>
 
-                <p>
-                    Our work is guided by a commitment to practical
-                    energy solutions, quality service and technological
-                    innovation.
-                </p>
 
-            </div>
+            <a href="services.html">
+                Services
+            </a>
 
 
-            <div class="mission-grid">
+            <a href="projects.html">
+                Projects
+            </a>
 
 
-                <div class="mission-card">
-
-                    <div class="mission-icon">
-                        🎯
-                    </div>
-
-                    <h3>
-                        Our Mission
-                    </h3>
-
-                    <p>
-                        To provide practical, reliable and quality
-                        renewable energy, electrical and technology
-                        solutions that meet the needs of our clients.
-                    </p>
-
-                </div>
-
-
-                <div class="mission-card">
-
-                    <div class="mission-icon">
-                        🔭
-                    </div>
-
-                    <h3>
-                        Our Vision
-                    </h3>
-
-                    <p>
-                        To contribute to a brighter future through
-                        accessible renewable energy, dependable
-                        electrical systems and innovative technology.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         CORE VALUES
-         ========================= -->
-
-    <section class="values-section">
-
-        <div class="container">
-
-            <div class="section-heading">
-
-                <span class="section-label">
-                    WHAT WE STAND FOR
-                </span>
-
-                <h2>
-                    Our Core
-                    <span>Values</span>
-                </h2>
-
-                <p>
-                    The principles that guide how we approach our
-                    work and serve our clients.
-                </p>
-
-            </div>
-
-
-            <div class="values-grid">
-
-
-                <div class="value-card">
-
-                    <div class="value-number">
-                        01
-                    </div>
-
-                    <h3>
-                        Quality
-                    </h3>
-
-                    <p>
-                        We strive for quality workmanship and solutions
-                        that are carefully planned for their intended use.
-                    </p>
-
-                </div>
-
-
-                <div class="value-card">
-
-                    <div class="value-number">
-                        02
-                    </div>
-
-                    <h3>
-                        Reliability
-                    </h3>
-
-                    <p>
-                        We focus on dependable solutions and responsible
-                        technical service.
-                    </p>
-
-                </div>
-
-
-                <div class="value-card">
-
-                    <div class="value-number">
-                        03
-                    </div>
-
-                    <h3>
-                        Innovation
-                    </h3>
-
-                    <p>
-                        We embrace renewable energy and modern technology
-                        to create practical solutions for today's needs.
-                    </p>
-
-                </div>
-
-
-                <div class="value-card">
-
-                    <div class="value-number">
-                        04
-                    </div>
-
-                    <h3>
-                        Integrity
-                    </h3>
-
-                    <p>
-                        We value honest communication, professional
-                        conduct and responsible service.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         COMPANY INFORMATION
-         ========================= -->
-
-    <section class="company-info">
-
-        <div class="container">
-
-            <div class="company-info-box">
-
-                <span class="section-label">
-                    COMPANY PROFILE
-                </span>
-
-                <h2>
-                    DE TSAKMA SOLAR ENERGY LTD
-                </h2>
-
-
-                <div class="company-details">
-
-                    <div class="company-detail">
-
-                        <span>
-                            Company Name
-                        </span>
-
-                        <strong>
-                            DE TSAKMA SOLAR ENERGY LTD
-                        </strong>
-
-                    </div>
-
-
-                    <div class="company-detail">
-
-                        <span>
-                            Registration
-                        </span>
-
-                        <strong>
-                            RC 8097864
-                        </strong>
-
-                    </div>
-
-
-                    <div class="company-detail">
-
-                        <span>
-                            Primary Focus
-                        </span>
-
-                        <strong>
-                            Renewable Energy & Technology
-                        </strong>
-
-                    </div>
-
-
-                    <div class="company-detail">
-
-                        <span>
-                            Services
-                        </span>
-
-                        <strong>
-                            Solar, Electrical & Technology Solutions
-                        </strong>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         CALL TO ACTION
-         ========================= -->
-
-    <section class="quote-section">
-
-        <div class="container quote-container">
-
-            <div>
-
-                <span class="section-label">
-                    LET'S WORK TOGETHER
-                </span>
-
-                <h2>
-                    Ready for a
-                    <span>Better Solution?</span>
-                </h2>
-
-                <p>
-                    Whether you need solar power, an inverter system,
-                    electrical installation or a technology solution,
-                    we're ready to discuss your requirements.
-                </p>
-
-            </div>
-
-
-            <a
-                href="contact.html"
-                class="btn btn-primary"
-            >
-                Contact Us →
+            <a href="contact.html">
+                Contact
             </a>
 
         </div>
 
-    </section>
+
+
+        <!-- SERVICES -->
+
+        <div class="footer-column">
+
+            <h3>
+                Services
+            </h3>
+
+
+            <a href="services.html">
+                Solar Energy
+            </a>
+
+
+            <a href="services.html">
+                Inverter & Battery
+            </a>
+
+
+            <a href="services.html">
+                Electrical Installation
+            </a>
+
+
+            <a href="services.html">
+                CCTV & Security
+            </a>
+
+
+            <a href="services.html">
+                Smart Home & Automation
+            </a>
+
+
+            <a href="services.html">
+                Networking & IoT
+            </a>
+
+        </div>
 
 
 
-    <!-- =========================
-         FOOTER
-         ========================= -->
+        <!-- CONTACT -->
 
-    <footer class="footer">
+        <div class="footer-column">
 
-        <div class="container footer-grid">
+            <h3>
+                Contact
+            </h3>
 
 
-            <div class="footer-brand">
+            <a href="tel:+2348139904445">
+                📞 +234 813 990 4445
+            </a>
 
-                <a
-                    href="../index.html"
-                    class="logo footer-logo"
-                >
 
-                    <img
-                        src="../images/logo.png"
-                        alt="DE TSAKMA SOLAR ENERGY LTD"
-                    >
+            <a
+                href="https://wa.me/2348139904445"
+                target="_blank"
+                rel="noopener"
+            >
+                💬 WhatsApp
+            </a>
 
-                </a>
 
-                <p>
-                    Renewable energy, electrical and technology
-                    solutions designed to power homes, businesses
-                    and a brighter future.
-                </p>
+            <a
+                href="mailto:detsakmasolarenergyltd@gmail.com"
+            >
+                📧 Email Us
+            </a>
 
-                <span class="slogan">
-                    …Powering a Brighter Tomorrow
+
+            <a
+                href="https://maps.app.goo.gl/gqwgfFvJYXa3xNCa8"
+                target="_blank"
+                rel="noopener"
+            >
+                📍 Yolde-pate Junction,
+                Yola South
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SOCIAL LINKS -->
+
+    <div class="container footer-social">
+
+        <a
+            href="https://www.facebook.com/Weacneconabtebjambexamhelp"
+            target="_blank"
+            rel="noopener"
+        >
+            Facebook
+        </a>
+
+
+        <a
+            href="https://www.instagram.com/nehemiah.peter?igsi=cjE2OXc5NGVvcmI1"
+            target="_blank"
+            rel="noopener"
+        >
+            Instagram
+        </a>
+
+
+        <a
+            href="https://www.tiktok.com/@shugabatsakma?_r=1&_t=ZS-99IbSkoyktB"
+            target="_blank"
+            rel="noopener"
+        >
+            TikTok
+        </a>
+
+    </div>
+
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <p>
+                ©
+                <span data-current-year>
+                    2026
                 </span>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h3>
-                    Company
-                </h3>
-
-                <a href="../index.html">
-                    Home
-                </a>
-
-                <a href="about.html">
-                    About Us
-                </a>
-
-                <a href="services.html">
-                    Services
-                </a>
-
-                <a href="projects.html">
-                    Projects
-                </a>
-
-            </div>
+                DE TSAKMA SOLAR ENERGY LTD.
+                All Rights Reserved.
+            </p>
 
 
-            <div class="footer-column">
-
-                <h3>
-                    Services
-                </h3>
-
-                <a href="services.html">
-                    Solar Energy
-                </a>
-
-                <a href="services.html">
-                    Inverter & Battery
-                </a>
-
-                <a href="services.html">
-                    Electrical Installation
-                </a>
-
-                <a href="services.html">
-                    CCTV & Security
-                </a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h3>
-                    Contact
-                </h3>
-
-                <a href="contact.html">
-                    Contact Us
-                </a>
-
-                <a href="contact.html">
-                    Request a Quote
-                </a>
-
-                <p>
-                    DE TSAKMA SOLAR ENERGY LTD
-                </p>
-
-            </div>
+            <p>
+                RC 8097864
+            </p>
 
         </div>
 
+    </div>
 
-        <div class="footer-bottom">
-
-            <div class="container">
-
-                <p>
-                    © 2026 DE TSAKMA SOLAR ENERGY LTD.
-                    All Rights Reserved.
-                </p>
-
-                <p>
-                    RC 8097864
-                </p>
-
-            </div>
-
-        </div>
-
-    </footer>
+</footer>
 
 
 
-    <!-- =========================
-         WHATSAPP
-         ========================= -->
+<!-- =====================================================
+     FLOATING WHATSAPP
+     ===================================================== -->
 
-    <a
-        href="https://wa.me/"
-        class="whatsapp-button"
-        target="_blank"
-        rel="noopener"
-        aria-label="Chat with DE TSAKMA SOLAR ENERGY LTD on WhatsApp"
-    >
-        💬
-    </a>
+<a
+    href="https://wa.me/2348139904445"
+    class="whatsapp-button"
+    target="_blank"
+    rel="noopener"
+    aria-label="Chat with DE TSAKMA SOLAR ENERGY LTD on WhatsApp"
+>
+    💬
+</a>
 
 
 
-    <script src="../js/script.js"></script>
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
+
+<script src="../js/script.js"></script>
+
 
 </body>
 
