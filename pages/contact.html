@@ -10,7 +10,7 @@
 
     <meta
         name="description"
-        content="Contact DE TSAKMA SOLAR ENERGY LTD for solar energy, inverter, electrical, CCTV, networking, automation and technology solutions."
+        content="Contact DE TSAKMA SOLAR ENERGY LTD for solar energy, inverter and battery systems, electrical installations, CCTV, networking, smart home and technology solutions."
     >
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,6 +28,7 @@
 
     <link rel="stylesheet" href="../css/style.css">
 
+
     <style>
 
         /* =========================
@@ -39,12 +40,14 @@
             background: var(--light);
         }
 
+
         .contact-grid {
             display: grid;
             grid-template-columns: 0.85fr 1.15fr;
             gap: 35px;
-            align-items: start;
+            align-items: stretch;
         }
+
 
         /* =========================
            CONTACT INFORMATION
@@ -58,9 +61,11 @@
             min-height: 100%;
         }
 
+
         .contact-info .section-label {
             color: #73c8f5;
         }
+
 
         .contact-info h2 {
             color: white;
@@ -68,11 +73,14 @@
             margin-bottom: 15px;
         }
 
+
         .contact-info > p {
             color: rgba(255,255,255,0.72);
             font-size: 13px;
+            line-height: 1.8;
             margin-bottom: 35px;
         }
+
 
         .contact-item {
             display: flex;
@@ -80,36 +88,51 @@
             margin-bottom: 25px;
         }
 
+
         .contact-icon {
             width: 46px;
             height: 46px;
             flex-shrink: 0;
+
             display: grid;
             place-items: center;
+
             border-radius: 11px;
+
             background: rgba(255,255,255,0.10);
+
             font-size: 20px;
         }
 
+
         .contact-item span {
             display: block;
+
             color: rgba(255,255,255,0.55);
+
             font-size: 10px;
             font-weight: 700;
+
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 4px;
+
+            margin-bottom: 5px;
         }
 
-        .contact-item strong {
-            color: white;
-            font-size: 14px;
-        }
 
+        .contact-item strong,
         .contact-item a {
             color: white;
             font-size: 14px;
+            line-height: 1.6;
         }
+
+
+        .contact-item a {
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
 
         .contact-item a:hover {
             color: #73c8f5;
@@ -122,21 +145,28 @@
 
         .quote-form-wrapper {
             background: white;
+
             padding: 45px;
+
             border-radius: var(--radius-lg);
+
             box-shadow: var(--shadow-sm);
         }
+
 
         .quote-form-wrapper h2 {
             font-size: 30px;
             margin-bottom: 8px;
         }
 
+
         .quote-form-wrapper > p {
             color: var(--light-text);
             font-size: 13px;
+            line-height: 1.7;
             margin-bottom: 30px;
         }
+
 
         .form-row {
             display: grid;
@@ -144,44 +174,65 @@
             gap: 18px;
         }
 
+
         .form-group {
             margin-bottom: 18px;
         }
 
+
         .form-group label {
             display: block;
+
             margin-bottom: 7px;
+
             font-size: 12px;
             font-weight: 700;
+
             color: var(--secondary);
         }
+
 
         .form-group input,
         .form-group select,
         .form-group textarea {
             width: 100%;
+
             border: 1px solid var(--border);
             border-radius: 8px;
+
             padding: 13px 14px;
+
             background: #fff;
+
             color: var(--secondary);
+
             font-family: inherit;
             font-size: 13px;
+
             outline: none;
+
             transition: var(--transition);
+
+            box-sizing: border-box;
         }
+
 
         .form-group input:focus,
         .form-group select:focus,
         .form-group textarea:focus {
             border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(8,127,206,0.08);
+
+            box-shadow:
+                0 0 0 3px
+                rgba(8,127,206,0.08);
         }
+
 
         .form-group textarea {
             min-height: 140px;
             resize: vertical;
         }
+
 
         .form-submit {
             width: 100%;
@@ -189,11 +240,41 @@
             cursor: pointer;
         }
 
+
         .form-note {
             text-align: center;
+
             margin-top: 12px;
+
             color: var(--light-text);
+
             font-size: 11px;
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           FORM SUCCESS MESSAGE
+           ========================= */
+
+        .form-success {
+            display: none;
+
+            margin-top: 18px;
+
+            padding: 14px 16px;
+
+            border-radius: 8px;
+
+            background: rgba(8,127,206,0.08);
+
+            border: 1px solid rgba(8,127,206,0.15);
+
+            color: var(--secondary);
+
+            font-size: 12px;
+
+            line-height: 1.6;
         }
 
 
@@ -206,51 +287,100 @@
             background: white;
         }
 
+
         .quick-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 22px;
         }
 
+
         .quick-card {
             padding: 30px;
+
             text-align: center;
+
             border: 1px solid var(--border);
+
             border-radius: var(--radius-md);
+
+            background: white;
+
             transition: var(--transition);
         }
 
+
         .quick-card:hover {
             transform: translateY(-5px);
+
             box-shadow: var(--shadow-md);
         }
+
 
         .quick-card-icon {
             font-size: 30px;
             margin-bottom: 15px;
         }
 
+
         .quick-card h3 {
             font-size: 17px;
             margin-bottom: 8px;
         }
 
+
         .quick-card p {
             color: var(--light-text);
+
             font-size: 12px;
+
+            line-height: 1.7;
         }
+
 
         .quick-card a {
             display: inline-block;
+
             margin-top: 12px;
+
             color: var(--primary);
+
             font-size: 12px;
             font-weight: 700;
+
+            text-decoration: none;
+        }
+
+
+        .quick-card a:hover {
+            text-decoration: underline;
         }
 
 
         /* =========================
-           MOBILE
+           CTA
+           ========================= */
+
+        .quote-section {
+            padding: 80px 0;
+        }
+
+
+        .quote-container {
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 30px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
            ========================= */
 
         @media (max-width: 850px) {
@@ -259,8 +389,15 @@
                 grid-template-columns: 1fr;
             }
 
+
             .quick-grid {
                 grid-template-columns: 1fr;
+            }
+
+
+            .quote-container {
+                flex-direction: column;
+                align-items: flex-start;
             }
 
         }
@@ -273,14 +410,26 @@
                 padding: 75px 0;
             }
 
+
             .contact-info,
             .quote-form-wrapper {
                 padding: 28px;
             }
 
+
             .form-row {
                 grid-template-columns: 1fr;
                 gap: 0;
+            }
+
+
+            .contact-info h2 {
+                font-size: 27px;
+            }
+
+
+            .quote-form-wrapper h2 {
+                font-size: 26px;
             }
 
         }
@@ -301,7 +450,11 @@
 
         <div class="container nav-container">
 
-            <a href="../index.html" class="logo">
+
+            <a
+                href="../index.html"
+                class="logo"
+            >
 
                 <img
                     src="../images/logo.png"
@@ -329,11 +482,17 @@
                     Projects
                 </a>
 
-                <a href="contact.html" class="active">
+                <a
+                    href="contact.html"
+                    class="active"
+                >
                     Contact
                 </a>
 
-                <a href="contact.html" class="nav-quote">
+                <a
+                    href="contact.html"
+                    class="nav-quote"
+                >
                     Get a Quote
                 </a>
 
@@ -344,6 +503,7 @@
                 class="menu-toggle"
                 aria-label="Open navigation menu"
                 aria-expanded="false"
+                type="button"
             >
                 ☰
             </button>
@@ -366,10 +526,12 @@
                 GET IN TOUCH
             </span>
 
+
             <h1>
                 Let's Discuss Your
                 <span>Project</span>
             </h1>
+
 
             <p>
                 Have a solar, electrical, backup power or technology
@@ -391,21 +553,26 @@
 
         <div class="container">
 
+
             <div class="contact-grid">
 
 
-                <!-- CONTACT INFORMATION -->
+                <!-- =====================
+                     CONTACT INFORMATION
+                     ===================== -->
 
                 <div class="contact-info">
+
 
                     <span class="section-label">
                         CONTACT US
                     </span>
 
+
                     <h2>
-                        We're Ready to
-                        Help
+                        We're Ready to Help
                     </h2>
+
 
                     <p>
                         Contact DE TSAKMA SOLAR ENERGY LTD to discuss
@@ -413,7 +580,7 @@
                     </p>
 
 
-                    <!-- Phone -->
+                    <!-- PHONE -->
 
                     <div class="contact-item">
 
@@ -421,22 +588,24 @@
                             📞
                         </div>
 
+
                         <div>
 
                             <span>
                                 Phone
                             </span>
 
-                            <strong>
-                                Contact us
-                            </strong>
+
+                            <a href="tel:+2348139904445">
+                                +234 813 990 4445
+                            </a>
 
                         </div>
 
                     </div>
 
 
-                    <!-- WhatsApp -->
+                    <!-- WHATSAPP -->
 
                     <div class="contact-item">
 
@@ -444,22 +613,28 @@
                             💬
                         </div>
 
+
                         <div>
 
                             <span>
                                 WhatsApp
                             </span>
 
-                            <strong>
-                                Available for enquiries
-                            </strong>
+
+                            <a
+                                href="https://wa.me/2348139904445"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                +234 813 990 4445
+                            </a>
 
                         </div>
 
                     </div>
 
 
-                    <!-- Email -->
+                    <!-- EMAIL -->
 
                     <div class="contact-item">
 
@@ -467,22 +642,26 @@
                             ✉️
                         </div>
 
+
                         <div>
 
                             <span>
                                 Email
                             </span>
 
-                            <strong>
-                                Send us an enquiry
-                            </strong>
+
+                            <a
+                                href="mailto:detsakmasolarenergyltd@gmail.com"
+                            >
+                                detsakmasolarenergyltd@gmail.com
+                            </a>
 
                         </div>
 
                     </div>
 
 
-                    <!-- Location -->
+                    <!-- ADDRESS -->
 
                     <div class="contact-item">
 
@@ -490,15 +669,23 @@
                             📍
                         </div>
 
+
                         <div>
 
                             <span>
-                                Location
+                                Address
                             </span>
 
-                            <strong>
-                                Nigeria
-                            </strong>
+
+                            <a
+                                href="https://maps.app.goo.gl/gqwgfFvJYXa3xNCa8"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                Adjacent Urawise Pharmacy Ltd,<br>
+                                Yolde-pate Junction,<br>
+                                Yola South, Adamawa State.
+                            </a>
 
                         </div>
 
@@ -508,26 +695,34 @@
 
 
 
-                <!-- QUOTE FORM -->
+                <!-- =====================
+                     QUOTE FORM
+                     ===================== -->
 
                 <div class="quote-form-wrapper">
+
 
                     <span class="section-label">
                         REQUEST A QUOTE
                     </span>
 
+
                     <h2>
                         Tell Us About Your Project
                     </h2>
 
+
                     <p>
                         Complete the form below with as much information
-                        as possible.
+                        as possible. Your request will be sent directly
+                        to DE TSAKMA SOLAR ENERGY LTD through WhatsApp.
                     </p>
 
 
                     <form id="quoteForm">
 
+
+                        <!-- NAME + PHONE -->
 
                         <div class="form-row">
 
@@ -538,11 +733,13 @@
                                     Full Name *
                                 </label>
 
+
                                 <input
                                     type="text"
                                     id="name"
                                     name="name"
                                     placeholder="Your full name"
+                                    autocomplete="name"
                                     required
                                 >
 
@@ -555,11 +752,13 @@
                                     Phone Number *
                                 </label>
 
+
                                 <input
                                     type="tel"
                                     id="phone"
                                     name="phone"
                                     placeholder="Your phone number"
+                                    autocomplete="tel"
                                     required
                                 >
 
@@ -568,6 +767,8 @@
                         </div>
 
 
+
+                        <!-- EMAIL + SERVICE -->
 
                         <div class="form-row">
 
@@ -578,11 +779,13 @@
                                     Email Address
                                 </label>
 
+
                                 <input
                                     type="email"
                                     id="email"
                                     name="email"
                                     placeholder="Your email address"
+                                    autocomplete="email"
                                 >
 
                             </div>
@@ -594,6 +797,7 @@
                                     Service Required *
                                 </label>
 
+
                                 <select
                                     id="service"
                                     name="service"
@@ -604,7 +808,7 @@
                                         Select a service
                                     </option>
 
-                                    <option value="Solar Energy">
+                                    <option value="Solar Energy System">
                                         Solar Energy System
                                     </option>
 
@@ -624,20 +828,24 @@
                                         Networking
                                     </option>
 
-                                    <option value="Smart Home">
+                                    <option value="Smart Home & Automation">
                                         Smart Home & Automation
                                     </option>
 
-                                    <option value="IoT">
+                                    <option value="IoT & Control Systems">
                                         IoT & Control Systems
                                     </option>
 
-                                    <option value="Programming">
+                                    <option value="Programming & Technology">
                                         Programming & Technology
                                     </option>
 
-                                    <option value="Consultation">
+                                    <option value="Consultation & Training">
                                         Consultation & Training
+                                    </option>
+
+                                    <option value="Other">
+                                        Other
                                     </option>
 
                                 </select>
@@ -648,33 +856,49 @@
 
 
 
+                        <!-- PROJECT DETAILS -->
+
                         <div class="form-group">
 
                             <label for="message">
                                 Project Details *
                             </label>
 
+
                             <textarea
                                 id="message"
                                 name="message"
-                                placeholder="Tell us about your project, estimated load, location, existing system or anything else that may help us understand your requirements."
+                                placeholder="Tell us about your project, estimated load, location, existing system, equipment or anything else that may help us understand your requirements."
                                 required
                             ></textarea>
 
                         </div>
 
 
+
+                        <!-- SUBMIT -->
+
                         <button
                             type="submit"
                             class="btn btn-primary form-submit"
                         >
-                            Submit Quote Request →
+                            Send Request via WhatsApp →
                         </button>
 
 
                         <p class="form-note">
-                            Your enquiry will be prepared for submission.
+                            Clicking the button will open WhatsApp with
+                            your enquiry prepared for submission.
                         </p>
+
+
+                        <div
+                            id="formSuccess"
+                            class="form-success"
+                            role="status"
+                            aria-live="polite"
+                        ></div>
+
 
                     </form>
 
@@ -696,11 +920,13 @@
 
         <div class="container">
 
+
             <div class="section-heading">
 
                 <span class="section-label">
                     QUICK CONTACT
                 </span>
+
 
                 <h2>
                     Choose How You'd Like to
@@ -710,8 +936,11 @@
             </div>
 
 
+
             <div class="quick-grid">
 
+
+                <!-- WHATSAPP -->
 
                 <div class="quick-card">
 
@@ -719,20 +948,31 @@
                         💬
                     </div>
 
+
                     <h3>
                         WhatsApp
                     </h3>
 
+
                     <p>
-                        Chat with us about your project or service enquiry.
+                        Chat with DE TSAKMA SOLAR ENERGY LTD
+                        about your project or service enquiry.
                     </p>
 
-                    <a href="#" id="whatsappLink">
+
+                    <a
+                        href="https://wa.me/2348139904445"
+                        target="_blank"
+                        rel="noopener"
+                    >
                         Start Chat →
                     </a>
 
                 </div>
 
+
+
+                <!-- PHONE -->
 
                 <div class="quick-card">
 
@@ -740,20 +980,27 @@
                         📞
                     </div>
 
+
                     <h3>
                         Phone
                     </h3>
 
+
                     <p>
-                        Speak directly with our team about your requirements.
+                        Speak directly with us about your energy,
+                        electrical or technology requirements.
                     </p>
 
-                    <a href="#">
-                        Call Us →
+
+                    <a href="tel:+2348139904445">
+                        Call +234 813 990 4445 →
                     </a>
 
                 </div>
 
+
+
+                <!-- EMAIL -->
 
                 <div class="quick-card">
 
@@ -761,15 +1008,21 @@
                         ✉️
                     </div>
 
+
                     <h3>
                         Email
                     </h3>
 
+
                     <p>
-                        Send us a detailed enquiry about your project.
+                        Send us a detailed enquiry about your
+                        project or service requirements.
                     </p>
 
-                    <a href="#">
+
+                    <a
+                        href="mailto:detsakmasolarenergyltd@gmail.com"
+                    >
                         Email Us →
                     </a>
 
@@ -791,23 +1044,36 @@
 
         <div class="container quote-container">
 
+
             <div>
 
                 <span class="section-label">
                     DE TSAKMA SOLAR ENERGY LTD
                 </span>
 
+
                 <h2>
                     …Powering a
                     <span>Brighter Tomorrow</span>
                 </h2>
 
+
                 <p>
-                    Renewable energy, electrical and technology solutions
-                    for a better and more connected future.
+                    Renewable energy, electrical and technology
+                    solutions for a better and more connected future.
                 </p>
 
             </div>
+
+
+            <a
+                href="https://wa.me/2348139904445"
+                class="btn btn-primary"
+                target="_blank"
+                rel="noopener"
+            >
+                Chat on WhatsApp →
+            </a>
 
         </div>
 
@@ -824,6 +1090,8 @@
         <div class="container footer-grid">
 
 
+            <!-- BRAND -->
+
             <div class="footer-brand">
 
                 <a
@@ -838,11 +1106,13 @@
 
                 </a>
 
+
                 <p>
                     Renewable energy, electrical and technology
                     solutions designed to power homes, businesses
                     and a brighter future.
                 </p>
+
 
                 <span class="slogan">
                     …Powering a Brighter Tomorrow
@@ -851,23 +1121,30 @@
             </div>
 
 
+
+            <!-- COMPANY -->
+
             <div class="footer-column">
 
                 <h3>
                     Company
                 </h3>
 
+
                 <a href="../index.html">
                     Home
                 </a>
+
 
                 <a href="about.html">
                     About Us
                 </a>
 
+
                 <a href="services.html">
                     Services
                 </a>
+
 
                 <a href="projects.html">
                     Projects
@@ -876,23 +1153,30 @@
             </div>
 
 
+
+            <!-- SERVICES -->
+
             <div class="footer-column">
 
                 <h3>
                     Services
                 </h3>
 
+
                 <a href="services.html">
                     Solar Energy
                 </a>
+
 
                 <a href="services.html">
                     Inverter & Battery
                 </a>
 
+
                 <a href="services.html">
                     Electrical Installation
                 </a>
+
 
                 <a href="services.html">
                     CCTV & Security
@@ -901,28 +1185,43 @@
             </div>
 
 
+
+            <!-- CONTACT -->
+
             <div class="footer-column">
 
                 <h3>
                     Contact
                 </h3>
 
-                <a href="contact.html">
-                    Contact Us
+
+                <a href="tel:+2348139904445">
+                    +234 813 990 4445
                 </a>
 
-                <a href="contact.html">
-                    Request a Quote
+
+                <a
+                    href="mailto:detsakmasolarenergyltd@gmail.com"
+                >
+                    detsakmasolarenergyltd@gmail.com
                 </a>
 
-                <p>
-                    DE TSAKMA SOLAR ENERGY LTD
-                </p>
+
+                <a
+                    href="https://maps.app.goo.gl/gqwgfFvJYXa3xNCa8"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Yola South, Adamawa State
+                </a>
 
             </div>
 
         </div>
 
+
+
+        <!-- FOOTER BOTTOM -->
 
         <div class="footer-bottom">
 
@@ -932,6 +1231,7 @@
                     © 2026 DE TSAKMA SOLAR ENERGY LTD.
                     All Rights Reserved.
                 </p>
+
 
                 <p>
                     RC 8097864
@@ -946,80 +1246,25 @@
 
 
     <!-- =========================
-         WHATSAPP FLOATING BUTTON
+         FLOATING WHATSAPP
          ========================= -->
 
     <a
-        href="#"
+        href="https://wa.me/2348139904445"
         class="whatsapp-button"
         id="floatingWhatsApp"
-        aria-label="Chat with DE TSAKMA SOLAR ENERGY LTD"
+        target="_blank"
+        rel="noopener"
+        aria-label="Chat with DE TSAKMA SOLAR ENERGY LTD on WhatsApp"
     >
         💬
     </a>
 
 
 
+    <!-- MAIN JAVASCRIPT -->
+
     <script src="../js/script.js"></script>
-
-
-    <!-- =========================
-         FORM SCRIPT
-         ========================= -->
-
-    <script>
-
-        const form = document.getElementById("quoteForm");
-
-        form.addEventListener("submit", function(event) {
-
-            event.preventDefault();
-
-            const name =
-                document.getElementById("name").value.trim();
-
-            const phone =
-                document.getElementById("phone").value.trim();
-
-            const email =
-                document.getElementById("email").value.trim();
-
-            const service =
-                document.getElementById("service").value;
-
-            const message =
-                document.getElementById("message").value.trim();
-
-
-            if (!name || !phone || !service || !message) {
-
-                alert(
-                    "Please complete all required fields."
-                );
-
-                return;
-
-            }
-
-
-            /*
-             * Temporary client-side submission.
-             *
-             * We will connect this form to the company's
-             * actual WhatsApp number/email/backend after
-             * the real contact details are provided.
-             */
-
-            alert(
-                "Thank you, " +
-                name +
-                "! Your quote request has been prepared. " +
-                "We will connect this form to the company's official contact channel next."
-            );
-
-        });
-
-    </script>
 
 </body>
 
